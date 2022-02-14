@@ -1,10 +1,10 @@
 import axios from 'axios'
 const baseUrl = '/api/cards'
+// const baseUrl = 'http://localhost:3001/cards'
+let token = null
 
-
-const getAll2 = () => {
-  const request = axios.get(baseUrl)
-  return request.then(response => response.data)
+const setToken = newToken => {
+  token = `bearer ${newToken}`
 }
 
 const getAll = () => {
@@ -24,5 +24,5 @@ const update = (id, newObject) => {
 }
 
 export default { 
-  getAll, create, update
+  getAll, create, update, setToken
 }

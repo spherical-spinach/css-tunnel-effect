@@ -3,6 +3,7 @@ import Card from './components/Card'
 import Notification from './components/Notification'
 import Footer from './components/Footer'
 import cardService from './services/cards'
+import loginService from './services/login'
 import NewCardForm from './components/NewCardForm'
 
 
@@ -17,6 +18,9 @@ const App = () => {
   const [newAnswerD, setNewAnswerD] = useState('')
   const [newCorrectAnswerId, setNewCorrectAnswerId] = useState('')
   const [errorMessage, setErrorMessage] = useState(null)
+  const [username, setUsername] = useState('') 
+  const [password, setPassword] = useState('')
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     cardService
@@ -50,7 +54,7 @@ const App = () => {
           answer: newAnswerD
         }
       ],
-      CorrectAnswerId: Number(newCorrectAnswerId)
+      correctAnswerId: newCorrectAnswerId
     }
 
     cardService
@@ -100,9 +104,50 @@ const App = () => {
     setNewCorrectAnswerId(event.target.value)
   }
 
+  const handleLogin = async (event) => {
+    event.preventDefault()
+
+    try {
+      const user = await loginService.login({
+        username, password,
+      })
+      setUser(user)
+      setUsername('')
+      setPassword('')
+    } catch (exception) {
+      setErrorMessage('wrong credentials')
+      setTimeout(() => {
+        setErrorMessage(null)
+      }, 5000)
+    }
+  }
+
+
 
   return (
     <div>
+      <h2>Login</h2>
+      <form onSubmit={handleLogin}>
+        <div>
+          username
+            <input
+            type="text"
+            value={username}
+            name="Username"
+            onChange={({ target }) => setUsername(target.value)}
+          />
+        </div>
+        <div>
+          password
+            <input
+            type="password"
+            value={password}
+            name="Password"
+            onChange={({ target }) => setPassword(target.value)}
+          />
+        </div>
+        <button type="submit">login</button>
+      </form>
       <h1>Kysymykset</h1>
       <Notification message={errorMessage} />
       <ul>

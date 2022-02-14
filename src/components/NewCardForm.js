@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NewCardForm = ({ addCard, newQuestion, newCourseId, newPartId, newAnswerA, newAnswerB, newAnswerC, newAnswerD,
-                      NewCorrectAnswerId,
+                      newCorrectAnswerId,
                       handleQuestionChange, handleCourseIdChange, handlePartIdChange, 
                       handleAnswerAChange, handleAnswerBChange, handleAnswerCChange, handleAnswerDChange,
                       handleCorrectAnswerIdChange
@@ -52,7 +52,7 @@ const NewCardForm = ({ addCard, newQuestion, newCourseId, newPartId, newAnswerA,
         </div>
         <div>
           oikean vastauksen numero: <input
-          value={NewCorrectAnswerId}
+          value={newCorrectAnswerId}
           onChange={handleCorrectAnswerIdChange}
           />
         </div>
