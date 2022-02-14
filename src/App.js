@@ -30,6 +30,15 @@ const App = () => {
     })
   }, [])
 
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem('loggedFlashCardappUser')
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON)
+      setUser(user)
+      cardService.setToken(user.token)
+    }
+  }, [])
+
   const addCard = (event) => {
     event.preventDefault()
     const cardObject = {
@@ -129,6 +138,32 @@ const App = () => {
   )
 
 
+
+  const logoutButton = () => (
+    <button onClick={handleLogout}>
+      logout
+    </button>  
+  )
+
+  const handleLogout = async (event) => {
+    event.preventDefault()
+
+    try {
+      window.localStorage.removeItem(
+        'loggedFlashCardappUser', JSON.stringify(user)
+      ) 
+      setUser(user)
+      setUsername('')
+      setPassword('')
+    } catch (exception) {
+      setErrorMessage('something went wrong')
+      setTimeout(() => {
+        setErrorMessage(null)
+      }, 5000)
+    }
+  }
+
+
   const handleLogin = async (event) => {
     event.preventDefault()
 
@@ -136,6 +171,9 @@ const App = () => {
       const user = await loginService.login({
         username, password,
       })
+      window.localStorage.setItem(
+        'loggedFlashCardappUser', JSON.stringify(user)
+      ) 
       setUser(user)
       setUsername('')
       setPassword('')
@@ -156,6 +194,7 @@ const App = () => {
       loginForm() :
       <div>
         <p>logged in as {user.username} </p>
+        {logoutButton()}
       </div>
       }
       <h1>Kysymykset</h1>
