@@ -1,6 +1,6 @@
 import axios from 'axios'
-// const baseUrl = '/api/cards'
-const baseUrl = 'http://localhost:3001/api/cards'
+const baseUrl = '/api/cards'
+// const baseUrl = 'http://localhost:3001/api/cards'
 let token = null
 
 const setToken = newToken => {
