@@ -1,178 +1,90 @@
 {
   "cards": [
     {
-      "id": 1,
-      "courseId": 1,
-      "partId": 1,
-      "question": "Mikä seuraavista väittämistä pitää paikkansa?",
+      "courseId": "62064823dc53e2c2bff3bef5",
+      "partId": "62064831dc53e2c2bff3befa",
+      "questionTypeId": "620e2a5313353117b5e4df11",
+      "question": "kysymys 2",
       "answers": [
-        {
-          "id": 1,
-          "answer": "Korkeimman oikeuden ennakkopäätökset ovat sekä vertikaalisesti että horisontaalisesti oikeudellisesti sitovia."
-        },
-        {
-          "id": 2,
-          "answer": "Korkeimman oikeuden ennakkopäätökset ovat vertikaalisesti oikeudellisesti sitovia, mutta eivät ole horisontaalisesti oikeudellisesti sitovia"
-        },
-        {
-          "id": 3,
-          "answer": "Korkeimman oikeuden ennakkopäätökset ovat horisontaalisesti oikeudellisesti sitovia, mutta eivät ole vertikaalisesti oikeudellisesti sitovia."
-        },
-        {
-          "id": 4,
-          "answer": "Korkeimman oikeuden ennakkopäätökset eivät ole vertikaalisesti tai horisontaalisesti oikeudellisesti sitovia."
-        }
+        "620e32c99310b501691b928c",
+        "620e32d498fefcc21e53f079"
       ],
-      "correctAnswerId": 4
+      "id": 1
     },
     {
-      "id": 2,
-      "courseId": 1,
-      "partId": 2,
-      "question": "Huhtikuussa 2011 annettiin Euroopan parlamentin ja neuvoston asetus (EU) N:o 492/2011, annettu 5 päivänä huhtikuuta 2011, työntekijöiden vapaasta liikkuvuudesta unionin alueella. Mikä seuraavista kyseistä EU-asetusta koskevista väittämistä ei pidä paikkaansa?",
+      "courseId": "62064823dc53e2c2bff3bef5",
+      "partId": "62064831dc53e2c2bff3befa",
+      "questionTypeId": "620e2a5313353117b5e4df11",
+      "question": "kysymys 2",
       "answers": [
-        {
-          "id": 1,
-          "answer": "Euroopan parlamentin ja neuvoston asetus (EU) N:o 492/2011 työntekijöiden vapaasta liikkuvuudesta unionin alueella on lakiin rinnastettava vahvasti velvoittava oikeuslähde."
-        },
-        {
-          "id": 2,
-          "answer": "Euroopan parlamentin ja neuvoston asetus (EU) N:o 492/2011 työntekijöiden vapaasta liikkuvuudesta unionin alueella velvoittaa saavutettavaan tulokseen nähden jokaista jäsenvaltiota,, jolle se on osoitettu, mutta jättää kansallisen viranomaisen valittavaksi muodot ja keinot."
-        },
-        {
-          "id": 3,
-          "answer": "Korkeimman oikTuomioistuimen on jätettävä soveltamatta kansallista säännöstä, joka on ristiriidassa Euroopan parlamentin ja neuvoston asetuksen (EU) N:o 492/2011 työntekijöiden vapaasta liikkuvuudesta unionin alueella kanssa.euden ennakkopäätökset ovat horisontaalisesti oikeudellisesti sitovia, mutta eivät ole vertikaalisesti oikeudellisesti sitovia."
-        },
-        {
-          "id": 4,
-          "answer": "Euroopan parlamentin ja neuvoston asetus (EU) N:o 492/2011 työntekijöiden vapaasta liikkuvuudesta unionin alueella on suoraan sovellettavaa EU-oikeutta, joten Suomen viranomaiset ja tuomioistuimet ovat velvollisia soveltamaan sitä sellaisenaan ilman, että kansallinen lainsäätäjä on sisällyttänyt sen osaksi kansallista lainsäädäntöä."
-        }
+        "620e32dc98fefcc21e53f07c",
+        "620e32d498fefcc21e53f079"
       ],
-      "correctAnswerId": 2
+      "id": 2
     },
     {
-      "question": "ksymysy",
-      "courseId": "1",
-      "partId": "2",
+      "courseId": "9",
+      "partId": "9",
+      "questionTypeId": "9",
+      "question": "moi",
       "answers": [
-        {
-          "id": 1,
-          "answer": "asdf"
-        },
-        {
-          "id": 2,
-          "answer": "SDA"
-        },
-        {
-          "id": 3,
-          "answer": "SAG"
-        },
-        {
-          "id": 4,
-          "answer": "FDSA"
-        }
+        "9",
+        "9",
+        "9",
+        "9"
       ],
-      "CorrectAnswerId": 2,
       "id": 3
     },
     {
-      "question": "asdf",
-      "courseId": "asdf",
-      "partId": "asdf",
+      "courseId": "9",
+      "partId": "9",
+      "questionTypeId": "9",
+      "question": "nji",
       "answers": [
-        {
-          "id": 1,
-          "answer": "asdf"
-        },
-        {
-          "id": 2,
-          "answer": "fdsa"
-        },
-        {
-          "id": 3,
-          "answer": "asdfsfadfds"
-        },
-        {
-          "id": 4,
-          "answer": "dfsa"
-        }
+        "8",
+        "8",
+        "8",
+        "8"
       ],
-      "CorrectAnswerId": null,
       "id": 4
     },
     {
-      "question": "sdf",
       "courseId": "1",
-      "partId": "1",
+      "partId": "2",
+      "questionTypeId": "3",
+      "question": "asdf",
       "answers": [
-        {
-          "id": 1,
-          "answer": "asdf"
-        },
-        {
-          "id": 2,
-          "answer": "adsf"
-        },
-        {
-          "id": 3,
-          "answer": "asdf"
-        },
-        {
-          "id": 4,
-          "answer": "asfd"
-        }
+        "d",
+        "dd",
+        "d",
+        "d"
       ],
-      "CorrectAnswerId": 2,
       "id": 5
     },
     {
-      "question": "asdfasd",
-      "courseId": "a",
-      "partId": "asdf",
+      "courseId": "1",
+      "partId": "2",
+      "questionTypeId": "3",
+      "question": "af",
       "answers": [
-        {
-          "id": 1,
-          "answer": "asdf"
-        },
-        {
-          "id": 2,
-          "answer": "asdfasdf"
-        },
-        {
-          "id": 3,
-          "answer": "dfsas"
-        },
-        {
-          "id": 4,
-          "answer": "df"
-        }
+        "d",
+        "d",
+        "d",
+        "d"
       ],
-      "CorrectAnswerId": 40,
       "id": 6
     },
     {
-      "question": "asdf",
-      "courseId": "2",
-      "partId": "2",
+      "courseId": "3",
+      "partId": "3",
+      "questionTypeId": "3",
+      "question": "ads",
       "answers": [
-        {
-          "id": 1,
-          "answer": "asdf"
-        },
-        {
-          "id": 2,
-          "answer": "df"
-        },
-        {
-          "id": 3,
-          "answer": "df"
-        },
-        {
-          "id": 4,
-          "answer": "df"
-        }
+        "d",
+        "dd",
+        "d",
+        "d"
       ],
-      "correctAnswerId": "3",
       "id": 7
     }
   ]

@@ -1,22 +1,23 @@
 import axios from 'axios'
-const baseUrl = '/api/cards'
-// const baseUrl = 'http://localhost:3001/api/cards'
+// const baseUrl = '/api/cards'
+const baseUrl = 'http://localhost:3001/api/cards'
 let token = null
 
 const setToken = newToken => {
   token = `bearer ${newToken}`
 }
 
-const getAll = () => {
-  const request = axios.get(baseUrl)
-
-  return request.then(response => response.data)
+const getAll = async () => {
+  const response = await axios.get(baseUrl)
+  return response.data
 }
 
-const create = newObject => {
-  const request = axios.post(baseUrl, newObject)
-  return request.then(response => response.data)
+const createNew = async (courseId, partId, questionTypeId, question, answers, id) => {
+  const object = { courseId, partId, questionTypeId, question, answers, id }
+  const response = await axios.post(baseUrl, object)
+  return response.data
 }
+
 
 const update = (id, newObject) => {
   const request = axios.put(`${baseUrl}/${id}`, newObject)
@@ -24,5 +25,5 @@ const update = (id, newObject) => {
 }
 
 export default { 
-  getAll, create, update, setToken
+  getAll, createNew
 }
