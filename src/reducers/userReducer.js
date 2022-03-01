@@ -19,7 +19,7 @@ export const userSlice = createSlice({
 
 export const loginUser = ( username, password ) => {
   return async dispatch => {
-    const user = await loginService.login(username, password)
+    const user = await loginService.login( {username, password} )
     window.localStorage.setItem(
       'loggedFlashCardappUser', JSON.stringify(user)
     ) 

@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 // import { useSelector } from 'react-redux'
 
 const Card = ({ card }) => {
+  console.log('card', card)
   return(
     <li className='card'>
       {card.question} 
