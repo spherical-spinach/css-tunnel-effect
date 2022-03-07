@@ -1,8 +1,17 @@
 import { useSelector } from 'react-redux'
 // import { useSelector } from 'react-redux'
 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  Navigate,
+  useParams,
+  useNavigate,
+} from "react-router-dom"
+
 const Course = ({ course }) => {
-  console.log('course', course)
   return(
     <li className='course'>
       {course.courseId.name} 
@@ -13,14 +22,18 @@ const Course = ({ course }) => {
 const Courses = () => {
   const courses = useSelector(state => state)
   return(
-    <ul>
-      {courses.map(course =>
-        <Course
-          key={course.id}
-          course={course}
-        />
-      )}
-    </ul>
+    <div>
+      Valitse kurssi aloittaaksesi treenit
+      <ul>
+        {courses.map(course =>
+          <Course
+            key={course.id}
+            course={course}
+          />
+        )}
+      </ul>
+    </div>
+
   )
 }
 

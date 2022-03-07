@@ -5,9 +5,6 @@ const courseSlice = createSlice({
   name: 'courses',
   initialState: [],
   reducers: {
-    appendCourse(state, action) {
-      state.push(action.payload)
-    },
     setCourses(state, action) {
       return action.payload
     }
@@ -23,11 +20,5 @@ export const initializeCourses = () => {
   }
 }
 
-export const createCourse = ( name, parts, cards, id ) => {
-  return async dispatch => {
-    const newCourse = await courseService.createNew(name, parts, cards, id)
-    dispatch(appendCourse(newCourse))
-  }
-}
 
 export default courseSlice.reducer
