@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux'
 import { createCard } from '../reducers/cardReducer'
 
-const NewCard = (props) => {
+const NewCard = () => {
   const dispatch = useDispatch()
 
-  const addCard = async (event) => {
+  const addCard = async event => {
     event.preventDefault()
     const question = event.target.question.value
     event.target.question.value = ''
@@ -22,45 +22,44 @@ const NewCard = (props) => {
     event.target.answer3.value = ''
     const answer4 = event.target.answer4.value
     event.target.answer4.value = ''
-    dispatch(createCard(courseId, partId, questionTypeId, question, [answer1, answer2, answer3, answer4]))
+    dispatch(
+      createCard(courseId, partId, questionTypeId, question, [
+        answer1,
+        answer2,
+        answer3,
+        answer4,
+      ])
+    )
   }
 
   return (
     <form onSubmit={addCard}>
       <div>
-        kurssi_id: <input name='courseId'>
-        </input>
+        kurssi_id: <input name="courseId"></input>
       </div>
       <div>
-        osan_id: <input name="partId"t>
-        </input>
+        osan_id: <input name="partId" t></input>
       </div>
       <div>
-        kysymystyypin_id: <input name="questionTypeId"t>
-        </input>
+        kysymystyypin_id: <input name="questionTypeId" t></input>
       </div>
       <div>
-        kysymys: <input name="question">
-        </input>
+        kysymys: <input name="question"></input>
       </div>
       <div>
-       vastausvaihtoehto 1: <input name="answer1">
-       </input>
+        vastausvaihtoehto 1: <input name="answer1"></input>
       </div>
       <div>
-       vastausvaihtoehto 2: <input name="answer2">
-       </input>
+        vastausvaihtoehto 2: <input name="answer2"></input>
       </div>
       <div>
-       vastausvaihtoehto 3: <input name="answer3">
-       </input>
+        vastausvaihtoehto 3: <input name="answer3"></input>
       </div>
       <div>
-       vastausvaihtoehto 4: <input name="answer4">
-       </input>
+        vastausvaihtoehto 4: <input name="answer4"></input>
       </div>
-     <button type="submit">add</button>
-   </form>
+      <button type="submit">add</button>
+    </form>
   )
 }
 

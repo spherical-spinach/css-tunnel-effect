@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   const padding = {
     padding: 20,
-  };
+  }
   return (
     <div>
       <Link style={padding} to="/">
@@ -28,7 +27,7 @@ const NavBar = () => {
           : <Link style={padding} to="/login">login</Link>
         } */}
     </div>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

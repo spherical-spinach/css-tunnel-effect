@@ -1,14 +1,12 @@
 import { useDispatch } from 'react-redux'
-import { loginUser } from '../reducers/togglerReducer'
+// import { loginUser } from '../reducers/togglerReducer'
 
-const Togglable = (props) => {
-
+const Togglable = props => {
   console.log('props', props)
 
   const dispatch = useDispatch()
 
-  const toggleVisibility = async (event) => {
-
+  const toggleVisibility = async event => {
     event.preventDefault()
     // console.log('event', event)
     // console.log('event.target', event.target)
@@ -19,7 +17,6 @@ const Togglable = (props) => {
 
   // const hideWhenVisible = { display: visible ? 'none' : '' }
   // const showWhenVisible = { display: visible ? '' : 'none' }
-
 
   return (
     // <div>
@@ -32,14 +29,14 @@ const Togglable = (props) => {
     //   </div>
     // </div>
     <div>
-    <div >
-      <button onClick={toggleVisibility}>{props.buttonLabel}</button>
+      <div>
+        <button onClick={toggleVisibility}>{props.buttonLabel}</button>
+      </div>
+      <div>
+        {props.children}
+        <button onClick={toggleVisibility}>cancel</button>
+      </div>
     </div>
-    <div >
-      {props.children}
-      <button onClick={toggleVisibility}>cancel</button>
-    </div>
-  </div>
   )
 }
 

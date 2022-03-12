@@ -1,10 +1,9 @@
-import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Form, Button } from 'react-bootstrap'
 
 import { loginUser } from '../reducers/userReducer'
 
-const RegisterForm = props => {
+const RegisterForm = () => {
   const dispatch = useDispatch()
 
   const addUser = async event => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
 import RegisterForm from './RegisterForm'
@@ -6,6 +5,7 @@ import RegisterForm from './RegisterForm'
 const RegisterUser = props => {
   const navigate = useNavigate()
 
+  // eslint-disable-next-line no-unused-vars
   const onSubmit = event => {
     event.preventDefault()
     props.onLogin('mluukkai')
