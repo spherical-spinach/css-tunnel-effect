@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom'
 
-import logo from '../images/logopohja.jpg'
-import Courses from './Courses'
+import '../css/Home.css'
 
 const Home = () => {
   return (
-    <div>
-      <h2>Pääsykoetreenit</h2>
-      <p>
+    <div className="homeContainer">
+      <h2>PÄÄSYKOETREENIT</h2>
+      <h4 className="subHeader">
         <Link to="/login">Kirjaudu sisään</Link> tai{' '}
         <Link to="/courses">aloita harjoittelu</Link> kirjautumatta.
-      </p>
-      <img src={logo} alt="logo" width="200" height="200"></img>
-      <Courses></Courses>
+      </h4>
+      <div className="middleButton" onClick={() => console.log('moro!')}>
+        <h1 className="middleButtonText">Aloita harjoittelu</h1>
+      </div>
+      <h4 className="bottomText">
+        Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
+      </h4>
     </div>
   )
 }
