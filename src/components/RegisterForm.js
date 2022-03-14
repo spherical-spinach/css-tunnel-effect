@@ -1,8 +1,9 @@
 import { useDispatch } from 'react-redux'
-import { loginUser } from '../reducers/userReducer'
 import { Form, Button } from 'react-bootstrap'
 
-const LoginForm = () => {
+import { loginUser } from '../reducers/userReducer'
+
+const RegisterForm = () => {
   const dispatch = useDispatch()
 
   const addUser = async event => {
@@ -17,15 +18,19 @@ const LoginForm = () => {
     <div>
       <form onSubmit={addUser}>
         <Form.Group>
-          <Form.Label>käyttäjätunnus tai sähköposti:</Form.Label>
+          <Form.Label>käyttäjätunnus:</Form.Label>
+          <Form.Control type="text" name="username" />
+          <Form.Label>sähköposti:</Form.Label>
           <Form.Control type="text" name="username" />
           <Form.Label>salasana:</Form.Label>
           <Form.Control type="password" name="password" />
-          <Button type="submit">kirjaudu</Button>
+          <Form.Label>anna salasana uudelleen:</Form.Label>
+          <Form.Control type="password" name="password" />
+          <Button type="submit">Rekisteröi käyttäjä</Button>
         </Form.Group>
       </form>
     </div>
   )
 }
 
-export default LoginForm
+export default RegisterForm

@@ -2,33 +2,28 @@ import { createSlice } from '@reduxjs/toolkit'
 import loginService from '../services/login'
 
 export const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState: {
-    user: null
+    user: null,
   },
   reducers: {
     login: (state, action) => {
       state.user = action.payload
     },
-    logout: (state) => {
+    logout: state => {
       state.user = null
-    }
-  }
+    },
+  },
 })
 
 export const { login } = userSlice.actions
 
-export const loginUser = ( username, password ) => {
-
+export const loginUser = (username, password) => {
   return async dispatch => {
-    const user = await loginService.login( {username, password} )
-    window.localStorage.setItem(
-      'loggedFlashCardappUser', JSON.stringify(user)
-    ) 
+    const user = await loginService.login({ username, password })
+    window.localStorage.setItem('loggedFlashCardappUser', JSON.stringify(user))
     dispatch(login(user))
   }
 }
 
-
 export default userSlice.reducer
-

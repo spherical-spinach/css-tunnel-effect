@@ -1,0 +1,48 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.homeContainer > * {
+  padding: 1rem;
+}
+
+.subHeader > a {
+  text-decoration: none;
+  color: grey;
+}
+
+.middleButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 15rem;
+  height: 15rem;
+  background-color: black;
+  border-radius: 100%;
+  -webkit-transition: color 2s;
+  transition: color 2s;
+}
+
+.middleButton {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.middleButton:hover {
+  background-color: grey;
+}
+
+.middleButtonText {
+  color: white;
+  text-align: center;
+}
+
+.bottomText > a {
+  text-decoration: none;
+  color: grey;
+}

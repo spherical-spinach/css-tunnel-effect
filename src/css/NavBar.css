@@ -1,0 +1,22 @@
+.NavBar {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+}
+
+.NavBarItemsContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.NavBarItem {
+  padding: 1rem;
+  color: white;
+  text-decoration-line: none;
+}
+
+.logo {
+  height: 4rem;
+}
