@@ -1,10 +1,19 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import Hamburger from 'hamburger-react'
+
 import '../css/NavBar.css'
 import logo from '../images/logopohja.jpg'
 
 const NavBar = () => {
+  const [isOpen, setOpen] = useState(false)
+  const navigate = useNavigate()
+
   return (
     <div className="NavBar">
+      <div className="HamburgerMenu">
+        <Hamburger toggled={isOpen} toggle={setOpen} />
+      </div>
       <div className="NavBarItemsContainer">
         <Link className="NavBarItem" to="/">
           koti
@@ -27,7 +36,7 @@ const NavBar = () => {
           : <Link className="NavBarItem" to="/login">login</Link>
         } */}
       </div>
-      <div className="logoContainer">
+      <div className="logoContainer" onClick={() => navigate('/')}>
         <img className="logo" src={logo} alt="logo" />
       </div>
     </div>
