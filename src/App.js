@@ -1,21 +1,45 @@
-import { useEffect } from 'react'
+// /* eslint-disable no-unused-vars */
+
+import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+import './css/App.css'
 import { initializeCards } from './reducers/cardReducer'
 import Routes from './components/Routes'
 import NavBar from './components/NavBar'
-import './css/App.css'
+import SideDrawer from './components/SideDrawer'
+import BackDrop from './components/BackDrop'
 
 const App = () => {
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
+
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(initializeCards())
   }, [dispatch])
 
+  const drawerToggleClickHandler = () => {
+    setSideDrawerOpen(!sideDrawerOpen)
+  }
+
+  const backDropClickHandler = () => {
+    setSideDrawerOpen(false)
+  }
+
   return (
     <Router>
-      <NavBar />
+      <NavBar
+        hamburgerIsOpen={sideDrawerOpen}
+        drawerToggleClickHandler={drawerToggleClickHandler}
+      />
+      <SideDrawer
+        show={sideDrawerOpen}
+        drawerToggleClickHandler={drawerToggleClickHandler}
+      />
+      {sideDrawerOpen && (
+        <BackDrop backDropClickHandler={backDropClickHandler} />
+      )}
       <Routes />
       <div>
         <i>Pääsykoetreenit.fi</i>

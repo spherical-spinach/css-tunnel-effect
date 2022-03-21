@@ -1,18 +1,16 @@
-import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Hamburger from 'hamburger-react'
 
 import '../css/NavBar.css'
 import logo from '../images/logopohja.jpg'
 
-const NavBar = () => {
-  const [isOpen, setOpen] = useState(false)
+const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
 
   return (
     <div className="NavBar">
-      <div className="HamburgerMenu">
-        <Hamburger toggled={isOpen} toggle={setOpen} />
+      <div className="HamburgerMenu" onClick={drawerToggleClickHandler}>
+        <Hamburger toggled={hamburgerIsOpen} />
       </div>
       <div className="NavBarItemsContainer">
         <Link className="NavBarItem" to="/">
