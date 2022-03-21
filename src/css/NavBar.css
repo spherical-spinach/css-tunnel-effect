@@ -1,5 +1,5 @@
 .NavBar {
-  background-color: black;
+  background-color: var(--main-color);
   display: flex;
   justify-content: center;
   height: 4rem;
@@ -13,10 +13,16 @@
 
 .NavBarItem {
   padding: 1rem;
-  color: white;
+  color: var(--contrast-color);
   text-decoration-line: none;
 }
 
 .logo {
   height: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .NavBarItemsContainer {
+    display: none;
+  }
 }

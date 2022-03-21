@@ -11,7 +11,7 @@
 
 .subHeader > a {
   text-decoration: none;
-  color: grey;
+  color: var(--secondary-color);
 }
 
 .middleButton {
@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   width: 15rem;
   height: 15rem;
-  background-color: black;
+  background-color: var(--main-color);
   border-radius: 100%;
   -webkit-transition: color 2s;
   transition: color 2s;
@@ -34,15 +34,15 @@
 }
 
 .middleButton:hover {
-  background-color: grey;
+  background-color: var(--secondary-color);
 }
 
 .middleButtonText {
-  color: white;
+  color: var(--contrast-color);
   text-align: center;
 }
 
 .bottomText > a {
   text-decoration: none;
-  color: grey;
+  color: var(--secondary-color);
 }

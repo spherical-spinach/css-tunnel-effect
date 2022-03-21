@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { initializeCards } from './reducers/cardReducer'
 import Routes from './components/Routes'
 import NavBar from './components/NavBar'
+import './css/App.css'
 
 const App = () => {
   const dispatch = useDispatch()
