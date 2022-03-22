@@ -1,0 +1,45 @@
+.sideDrawer {
+  height: 100%;
+  background: var(--main-color);
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  max-width: 400px;
+  z-index: 1001;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.sideDrawer.open {
+  transform: translateX(0);
+}
+
+.sideDrawer ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sideDrawer li {
+  margin: 0.5rem 0;
+}
+
+.sideDrawer a {
+  color: white;
+  text-decoration: none;
+}
+
+.sideDrawer a:hover,
+.sideDrawer a:active {
+  color: var(--accent-color);
+}
+
+@media only screen and (min-width: 759px) {
+  .sideDrawer {
+    display: none;
+  }
+}

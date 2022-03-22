@@ -1,17 +1,25 @@
 .homeContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  padding-top: 5rem;
 }
 
 .homeContainer > * {
   padding: 1rem;
 }
 
+.header {
+  padding-top: 5rem;
+}
+
+.subHeader {
+  text-align: center;
+}
+
 .subHeader > a {
   text-decoration: none;
-  color: grey;
+  color: var(--secondary-color);
 }
 
 .middleButton {
@@ -22,27 +30,44 @@
   flex-wrap: wrap;
   width: 15rem;
   height: 15rem;
-  background-color: black;
+  background-color: var(--main-color);
   border-radius: 100%;
-  -webkit-transition: color 2s;
-  transition: color 2s;
-}
-
-.middleButton {
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.middleButton:hover {
-  background-color: grey;
+  cursor: pointer;
+  box-shadow: 0 12px #999;
 }
 
 .middleButtonText {
-  color: white;
+  color: var(--contrast-color);
+  text-align: center;
+}
+
+.bottomText {
+  padding-top: 3rem;
   text-align: center;
 }
 
 .bottomText > a {
   text-decoration: none;
-  color: grey;
+  color: var(--secondary-color);
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+  .middleButton:active {
+    opacity: 0.8;
+    box-shadow: 0 8px #666;
+    transform: translateY(4px);
+  }
+}
+
+/* Non-mobile devices */
+@media only screen and (min-width: 769px) {
+  .middleButton:hover {
+    opacity: 0.8;
+  }
+
+  .middleButton:active {
+    box-shadow: 0 8px #666;
+    transform: translateY(4px);
+  }
 }
