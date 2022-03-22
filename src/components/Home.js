@@ -5,7 +5,7 @@ import '../css/Home.css'
 const Home = () => {
   return (
     <div className="homeContainer">
-      <h2>PÄÄSYKOETREENIT</h2>
+      <h2 className="header">PÄÄSYKOETREENIT</h2>
       <h4 className="subHeader">
         <Link to="/login">Kirjaudu sisään</Link> tai{' '}
         <Link to="/courses">aloita harjoittelu</Link> kirjautumatta.

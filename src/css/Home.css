@@ -1,11 +1,20 @@
 .homeContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
 
 .homeContainer > * {
   padding: 1rem;
+}
+
+.header {
+  padding-top: 5rem;
+}
+
+.subHeader {
+  text-align: center;
 }
 
 .subHeader > a {
@@ -29,6 +38,11 @@
 
 .middleButtonText {
   color: var(--contrast-color);
+  text-align: center;
+}
+
+.bottomText {
+  padding-top: 3rem;
   text-align: center;
 }
 
