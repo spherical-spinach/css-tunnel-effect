@@ -13,6 +13,7 @@ body {
   --main-color: black;
   --secondary-color: grey;
   --contrast-color: #ffffff;
+  --accent-color: orange;
   height: 100%;
 }
 
