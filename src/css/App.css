@@ -22,6 +22,7 @@ body {
   justify-content: space-between;
   height: 100%;
   transform: translateY(-4rem);
+  padding-top: 4rem;
 }
 
 .footer {
