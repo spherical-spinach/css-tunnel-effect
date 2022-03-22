@@ -24,18 +24,8 @@
   height: 15rem;
   background-color: var(--main-color);
   border-radius: 100%;
-  -webkit-transition: color 2s;
-  transition: color 2s;
   cursor: pointer;
-}
-
-.middleButton {
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.middleButton:hover {
-  background-color: var(--secondary-color);
+  box-shadow: 0 12px #999;
 }
 
 .middleButtonText {
@@ -46,4 +36,23 @@
 .bottomText > a {
   text-decoration: none;
   color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .middleButton:active {
+    opacity: 0.8;
+    box-shadow: 0 8px #666;
+    transform: translateY(4px);
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .middleButton:hover {
+    opacity: 0.8;
+  }
+
+  .middleButton:active {
+    box-shadow: 0 8px #666;
+    transform: translateY(4px);
+  }
 }
