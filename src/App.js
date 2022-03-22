@@ -40,9 +40,11 @@ const App = () => {
       {sideDrawerOpen && (
         <BackDrop backDropClickHandler={backDropClickHandler} />
       )}
-      <Routes />
-      <div>
-        <i>Pääsykoetreenit.fi</i>
+      <div className="appContainer">
+        <Routes />
+        <div className="footer">
+          <i>Pääsykoetreenit.fi</i>
+        </div>
       </div>
     </Router>
   )

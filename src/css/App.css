@@ -1,5 +1,37 @@
-:root {
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+#root {
   --main-color: black;
   --secondary-color: grey;
   --contrast-color: #ffffff;
+  height: 100%;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transform: translateY(-4rem);
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--main-color);
+  padding: 4rem;
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.footer > i {
+  color: white;
 }

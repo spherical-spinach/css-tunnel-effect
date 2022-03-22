@@ -38,6 +38,7 @@
   color: var(--secondary-color);
 }
 
+/* Mobile devices */
 @media only screen and (max-width: 768px) {
   .middleButton:active {
     opacity: 0.8;
@@ -46,6 +47,7 @@
   }
 }
 
+/* Non-mobile devices */
 @media only screen and (min-width: 769px) {
   .middleButton:hover {
     opacity: 0.8;
