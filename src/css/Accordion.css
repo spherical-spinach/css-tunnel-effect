@@ -1,0 +1,72 @@
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.accordionHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  padding: 1rem;
+  padding-left: 4rem;
+}
+
+.accordionContent {
+  border: 0.5rem solid var(--main-color);
+  border-top: 0px;
+}
+
+p {
+  padding-left: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0rem;
+}
+
+h2 {
+  color: var(--contrast-color);
+}
+
+.arrow-down {
+  /* creating the triangle */
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--contrast-color);
+
+  /* positioning the triangle and adding transform time */
+  margin-top: 0.7rem;
+  margin-left: 0.7rem;
+  transition: transform 0.3s ease-out;
+}
+
+.arrow-down.show {
+  transform: rotate(180deg) translateY(3px);
+}
+
+/* Tablet mobile devices */
+@media only screen and (max-width: 768px) {
+  p:active {
+    background-color: var(--secondary-color);
+  }
+}
+
+/* Smaller mobile devices */
+@media only screen and (max-width: 600px) {
+  .accordionHead {
+    padding-left: 1rem;
+  }
+  p {
+    padding-left: 1rem;
+  }
+}
+
+/* Non-mobile devices */
+@media only screen and (min-width: 769px) {
+  p:hover {
+    background-color: var(--secondary-color);
+  }
+}
