@@ -7,6 +7,21 @@
   align-items: stretch;
 }
 
+.practice2Button {
+  padding: 4rem;
+  background-color: var(--main-color);
+  align-self: center;
+  border-radius: 50%;
+}
+
+.practice2Button:hover {
+  background-color: var(--secondary-color);
+}
+
+.practice2Button > p {
+  color: var(--contrast-color);
+}
+
 /* Smaller desktop devices */
 @media only screen and (max-width: 1300px) {
   .practiceContainer {
