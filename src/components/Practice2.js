@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import MultipleChoice from './MultipleChoice'
+import MultipleChoiceContainer from './MultipleChoiceContainer'
 import '../css/Practice2.css'
 
 const Practice2 = () => {
@@ -10,7 +10,7 @@ const Practice2 = () => {
       <h4>"[INSERT KURSSI]"</h4>
       <h4>OSASTA</h4>
       <h4>"[INSERT OSA]"</h4>
-      <MultipleChoice />
+      <MultipleChoiceContainer />
     </div>
   )
 }

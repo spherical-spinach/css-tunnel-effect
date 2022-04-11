@@ -1,49 +1,40 @@
-/* eslint-disable no-unused-vars */
-import { hasSelectionSupport } from '@testing-library/user-event/dist/utils'
-import { Formik, Field, Form } from 'formik'
+import { Formik, Form } from 'formik'
 
+import MultipleChoiceQuestion from './MultipleChoiceQuestion'
 import '../css/MultipleChoice.css'
 
-const MultipleChoice = () => {
+/**
+ * Kun submit tapahtuu, halutaan tietää
+ * A: Mitä on painettu
+ * B: Mitä olisi pitänyt painaa?
+ *
+ * JOS nämä ovat sama, niin näytetään vihreä
+ * tausta oikean vaihtoehdon kohdalla
+ *
+ * JOS nämä ovat eri, niin näytetään LISÄKSI
+ * punainen tausta valinnan kohdalla
+ *
+ * Eli jokaisen kysymyksen kohdalla halutaan
+ *
+ *
+ *
+ *
+ */
+
+const MultipleChoice = ({ questions, initialValues }) => {
+  console.log('täs nää:', initialValues)
   return (
     <div>
-      <h4>KYSYMYS</h4>
       <Formik
-        initialValues={{
-          toggled: [],
-        }}
+        initialValues={initialValues}
         onSubmit={values => {
           alert(JSON.stringify(values, null, 2))
         }}
       >
         <Form>
-          <div
-            className="checkbox-group"
-            role="group"
-            aria-labelledby="checkbox-group"
-          >
-            <div className="checkbox-group-item">
-              One
-              <label className="custom-checkbox">
-                <Field type="checkbox" name="toggled" value="One" />
-                <span className="checkmark"></span>
-              </label>
-            </div>
-            <div className="checkbox-group-item">
-              Two
-              <label className="custom-checkbox">
-                <Field type="checkbox" name="toggled" value="Two" />
-                <span className="checkmark"></span>
-              </label>
-            </div>
-            <div className="checkbox-group-item">
-              Three
-              <label className="custom-checkbox">
-                <Field type="checkbox" name="toggled" value="Three" />
-                <span className="checkmark"></span>
-              </label>
-            </div>
-          </div>
+          {questions.map(question => (
+            <MultipleChoiceQuestion question={question} key={question.id} />
+          ))}
           <button type="submit">TARKISTA</button>
         </Form>
       </Formik>
