@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom'
 import '../css/Home.css'
 
 const Home = () => {
+  const navigate = useNavigate()
   //this is a cheap mock-login functionality!
   //be sure to delete this later when
   //implementing actual login functionality!
@@ -22,7 +22,7 @@ const Home = () => {
           <Link to="/courses">aloita harjoittelu</Link> kirjautumatta.
         </h4>
       )}
-      <div className="middleButton" onClick={() => console.log('moro!')}>
+      <div className="middleButton" onClick={() => navigate('/practice')}>
         <h1 className="middleButtonText">Aloita harjoittelu</h1>
       </div>
       {!loggedIn && (

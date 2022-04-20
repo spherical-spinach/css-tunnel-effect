@@ -1,0 +1,14 @@
+.practice2Container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20% 0 20%;
+  line-height: 2.3rem;
+}
+
+.practice2Container > h4 {
+  text-align: center;
+  padding: 0 20% 0 20%;
+  line-height: 2.3rem;
+}

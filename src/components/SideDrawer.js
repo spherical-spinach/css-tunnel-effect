@@ -9,38 +9,36 @@ const SideDrawer = ({ show, drawerToggleClickHandler }) => {
   return (
     <nav className={drawerClasses}>
       <ul>
-        <ul>
-          <li>
-            <Link to="/" onClick={drawerToggleClickHandler}>
-              koti
-            </Link>
-          </li>
-          <li>
-            <Link to="/practice" onClick={drawerToggleClickHandler}>
-              treenaa
-            </Link>
-          </li>
-          <li>
-            <Link to="/Revise" onClick={drawerToggleClickHandler}>
-              kertaa
-            </Link>
-          </li>
-          <li>
-            <Link to="/login" onClick={drawerToggleClickHandler}>
-              kirjautuminen
-            </Link>
-          </li>
-          <li>
-            <Link to="/register" onClick={drawerToggleClickHandler}>
-              luo tili
-            </Link>
-          </li>
-          <li>
-            <Link to="/practice" onClick={drawerToggleClickHandler}>
-              treenaa
-            </Link>
-          </li>
-        </ul>
+        <li>
+          <Link to="/" onClick={drawerToggleClickHandler}>
+            koti
+          </Link>
+        </li>
+        <li>
+          <Link to="/practice" onClick={drawerToggleClickHandler}>
+            treenaa
+          </Link>
+        </li>
+        <li>
+          <Link to="/Revise" onClick={drawerToggleClickHandler}>
+            kertaa
+          </Link>
+        </li>
+        <li>
+          <Link to="/login" onClick={drawerToggleClickHandler}>
+            kirjautuminen
+          </Link>
+        </li>
+        <li>
+          <Link to="/register" onClick={drawerToggleClickHandler}>
+            luo tili
+          </Link>
+        </li>
+        <li>
+          <Link to="/practice" onClick={drawerToggleClickHandler}>
+            treenaa
+          </Link>
+        </li>
       </ul>
     </nav>
   )
