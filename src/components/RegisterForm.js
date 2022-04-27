@@ -11,11 +11,11 @@ const RegisterForm = () => {
     event.preventDefault()
     const username = event.target.username.value
     event.target.username.value = ''
-    // const email = event.target.email.value
-    // event.target.email.value = ''
+    const email = event.target.email.value
+    event.target.email.value = ''
     const password = event.target.password.value
     event.target.password.value = ''
-    dispatch(registerUser(username, password))
+    dispatch(registerUser(username, email, password))
   }
   return (
     <div>

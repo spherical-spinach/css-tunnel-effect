@@ -41,9 +41,9 @@ export const logoutUser = () => {
 
 export const { register } = userSlice.actions
 
-export const registerUser = (username, password) => {
+export const registerUser = (username, email, password) => {
   return async dispatch => {
-    const user = await registerService.register(username, password)
+    const user = await registerService.register(username, email, password)
     dispatch(register(user))
   }
 }
