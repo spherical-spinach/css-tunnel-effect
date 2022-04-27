@@ -1,6 +1,6 @@
 import axios from 'axios'
-const baseUrl = '/api/courses'
-// const baseUrl = 'http://localhost:3001/api/courses'
+// const baseUrl = '/api/courses'
+const baseUrl = 'http://localhost:3001/api/courses'
 
 
 const getAll = async () => {

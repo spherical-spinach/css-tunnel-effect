@@ -43,7 +43,7 @@ const App = () => {
       <div className="appContainer">
         <Routes />
         <div className="footer">
-          <i>Pääsykoetreenit.fi</i>
+          <i>paasykoetreenit.fi</i>
         </div>
       </div>
     </Router>

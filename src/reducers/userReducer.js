@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import loginService from '../services/login'
+import registerService from '../services/register'
 
 export const userSlice = createSlice({
   name: 'user',
@@ -13,6 +14,9 @@ export const userSlice = createSlice({
     logout: state => {
       state.user = null
     },
+    register: state => {
+      state.user = null
+    },
   },
 })
 
@@ -23,6 +27,24 @@ export const loginUser = (username, password) => {
     const user = await loginService.login({ username, password })
     window.localStorage.setItem('loggedFlashCardappUser', JSON.stringify(user))
     dispatch(login(user))
+  }
+}
+
+export const { logout } = userSlice.actions
+
+export const logoutUser = () => {
+  return dispatch => {
+    window.localStorage.removeItem('loggedFlashCardappUser')
+    dispatch(logout())
+  }
+}
+
+export const { register } = userSlice.actions
+
+export const registerUser = (username, password) => {
+  return async dispatch => {
+    const user = await registerService.register(username, password)
+    dispatch(register(user))
   }
 }
 
