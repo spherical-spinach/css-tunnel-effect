@@ -1,6 +1,6 @@
 import axios from 'axios'
-const baseUrl = '/api/cards'
-// const baseUrl = 'http://localhost:3001/cards'
+const baseUrl = '/api/questions'
+// const baseUrl = 'http://localhost:3001/questions'
 
 // eslint-disable-next-line no-unused-vars
 let token = null

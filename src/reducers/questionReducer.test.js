@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
-import cardReducer from './cardReducer'
+import questionReducer from './questionReducer'
 import deepFreeze from 'deep-freeze'
 
-describe('cardReducer', () => {
-  test('returns new state with action NEW_CARD', () => {
+describe('questionReducer', () => {
+  test('returns new state with action NEW_QUESTION', () => {
     const state = []
     const action = {
-      type: 'NEW_CARD',
+      type: 'NEW_QUESTION',
       data: {
         courseId: '62064823dc53e2c2bff3bef5',
         partId: '62064831dc53e2c2bff3befa',
@@ -22,7 +22,7 @@ describe('cardReducer', () => {
     }
 
     deepFreeze(state)
-    const newState = cardReducer(state, action)
+    const newState = questionReducer(state, action)
 
     expect(newState).toHaveLength(1)
     expect(newState).toContainEqual(action.data)

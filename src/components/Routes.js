@@ -1,6 +1,6 @@
 import { Route, Routes as RouterRoutes } from 'react-router-dom'
 
-import Cards from './Cards'
+import Questions from './Question'
 import Courses from './Courses'
 import Home from './Home'
 import Login from './Login'
@@ -13,7 +13,7 @@ const Routes = () => {
   return (
     <div>
       <RouterRoutes>
-        <Route path="/cards" element={<Cards />} />
+        <Route path="/questions" element={<Questions />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
