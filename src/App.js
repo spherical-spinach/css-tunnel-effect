@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import './css/App.css'
-import { initializeCards } from './reducers/cardReducer'
+import { initializeQuestions } from './reducers/questionReducer'
 import Routes from './components/Routes'
 import NavBar from './components/NavBar'
 import SideDrawer from './components/SideDrawer'
@@ -16,7 +16,7 @@ const App = () => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(initializeCards())
+    dispatch(initializeQuestions())
   }, [dispatch])
 
   const drawerToggleClickHandler = () => {

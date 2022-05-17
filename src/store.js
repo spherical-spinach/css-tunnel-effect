@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import cardReducer from './reducers/cardReducer'
+import questionReducer from './reducers/questionReducer'
 
 const store = configureStore({
-  reducer: cardReducer
+  reducer: questionReducer,
 })
 
 export default store

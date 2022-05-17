@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux'
-import { createCard } from '../reducers/cardReducer'
+import { createQuestion } from '../reducers/questionReducer'
 
-const NewCard = () => {
+const NewQuestion = () => {
   const dispatch = useDispatch()
 
-  const addCard = async event => {
+  const addQuestion = async event => {
     event.preventDefault()
     const question = event.target.question.value
     event.target.question.value = ''
@@ -23,7 +23,7 @@ const NewCard = () => {
     const answer4 = event.target.answer4.value
     event.target.answer4.value = ''
     dispatch(
-      createCard(courseId, partId, questionTypeId, question, [
+      createQuestion(courseId, partId, questionTypeId, question, [
         answer1,
         answer2,
         answer3,
@@ -33,7 +33,7 @@ const NewCard = () => {
   }
 
   return (
-    <form onSubmit={addCard}>
+    <form onSubmit={addQuestion}>
       <div>
         kurssi_id: <input name="courseId"></input>
       </div>
@@ -63,4 +63,4 @@ const NewCard = () => {
   )
 }
 
-export default NewCard
+export default NewQuestion
