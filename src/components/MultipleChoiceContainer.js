@@ -31,7 +31,7 @@ import { useSelector } from 'react-redux'
 
 const MultipleChoiceContainer = () => {
   let initialValues = {}
-  const questions = useSelector(state => state)
+  const questions = useSelector(state => state.questions)
 
   console.log('täs data backendistä: ', questions)
 

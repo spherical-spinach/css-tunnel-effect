@@ -5,7 +5,7 @@ const Course = ({ course }) => {
 }
 
 const Courses = () => {
-  const courses = useSelector(state => state)
+  const courses = useSelector(state => state.questions)
   return (
     <div>
       Valitse kurssi aloittaaksesi treenit

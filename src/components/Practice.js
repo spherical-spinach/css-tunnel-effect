@@ -19,7 +19,7 @@ const Practice = () => {
       <Accordion title="KURSSI" />
       <Accordion title="OSA-ALUE" />
       <Accordion title="KYSYMYSTEN MÄÄRÄ" />
-      <Accordion title="KYSYMYKSET" />
+      {/* <Accordion title="KYSYMYKSET" /> */}
       <div className="practice2Button" onClick={() => navigate('/practice2')}>
         <p>Treenaa 2 -näkymä</p>
       </div>

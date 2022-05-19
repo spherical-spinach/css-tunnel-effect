@@ -13,6 +13,8 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import './css/App.css'
 import { initializeQuestions } from './reducers/questionReducer'
+import { initializeCourses } from './reducers/courseReducer'
+import { initializeParts } from './reducers/partReducer'
 import Routes from './components/Routes'
 import NavBar from './components/NavBar'
 import SideDrawer from './components/SideDrawer'
@@ -23,13 +25,18 @@ const App = () => {
   // const store = useStore()
   const dispatch = useDispatch()
   useEffect(async () => {
+    await dispatch(initializeCourses())
+    // console.log('tässä store: ', store.getState())
+  }, [dispatch])
+  useEffect(async () => {
     await dispatch(initializeQuestions())
     // console.log('tässä store: ', store.getState())
   }, [dispatch])
+  useEffect(async () => {
+    await dispatch(initializeParts())
+    // console.log('tässä store: ', store.getState())
+  }, [dispatch])
 
-  // const questions = useSelector(state => state.map(objekti => objekti.content))
-
-  // console.log(questions)
 
   const drawerToggleClickHandler = () => {
     setSideDrawerOpen(!sideDrawerOpen)
