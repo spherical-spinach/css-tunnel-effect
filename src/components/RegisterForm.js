@@ -3,7 +3,6 @@ import { Form, Button } from 'react-bootstrap'
 
 import { registerUser } from '../reducers/userReducer'
 
-
 const RegisterForm = () => {
   const dispatch = useDispatch()
 

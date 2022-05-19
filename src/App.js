@@ -1,7 +1,14 @@
 // /* eslint-disable no-unused-vars */
 
+//commented parts are a reference for getting data
+//from Redux-store
+
 import { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import {
+  useDispatch,
+  // useStore,
+  // useSelector
+} from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import './css/App.css'
@@ -13,11 +20,16 @@ import BackDrop from './components/BackDrop'
 
 const App = () => {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
-
+  // const store = useStore()
   const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(initializeQuestions())
+  useEffect(async () => {
+    await dispatch(initializeQuestions())
+    // console.log('tässä store: ', store.getState())
   }, [dispatch])
+
+  // const questions = useSelector(state => state.map(objekti => objekti.content))
+
+  // console.log(questions)
 
   const drawerToggleClickHandler = () => {
     setSideDrawerOpen(!sideDrawerOpen)

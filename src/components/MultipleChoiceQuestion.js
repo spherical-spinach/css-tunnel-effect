@@ -1,7 +1,7 @@
 import { Field } from 'formik'
 
 const MultipleChoiceQuestion = ({ question }) => {
-  const letters = ['A', 'B', 'C', 'D']
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
   let i = -1
   return (
     <div
@@ -9,17 +9,17 @@ const MultipleChoiceQuestion = ({ question }) => {
       role="group"
       aria-labelledby="checkbox-group"
     >
-      <h4>KYSYMYS {question.id}</h4>
-      {question.choices.map(choice => {
+      <h4>{question.content}</h4>
+      {question.answers.map(answer => {
         i++
         return (
-          <div className="checkbox-group-item" key={choice.id}>
-            {letters[i]}: {choice.text}
+          <div className="checkbox-group-item" key={answer.id}>
+            {letters[i]}: {answer.content}
             <label className="custom-checkbox">
               <Field
                 type="radio"
                 name={`toggled${question.id}`}
-                value={String(choice.id)}
+                value={String(answer.id)}
               />
               <span className="checkmark"></span>
             </label>
