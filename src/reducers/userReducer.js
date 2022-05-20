@@ -11,7 +11,7 @@ export const userSlice = createSlice({
     login: (state, action) => {
       state.user = action.payload
     },
-    logout: state => {
+    logout: (state) => {
       state.user = null
     },
     register: state => {
@@ -20,7 +20,9 @@ export const userSlice = createSlice({
   },
 })
 
-export const { login } = userSlice.actions
+export const { login, logout } = userSlice.actions
+
+export const selectUser = (state) => state.user.user
 
 export const loginUser = (username, password) => {
   return async dispatch => {
@@ -29,8 +31,6 @@ export const loginUser = (username, password) => {
     dispatch(login(user))
   }
 }
-
-export const { logout } = userSlice.actions
 
 export const logoutUser = () => {
   return dispatch => {

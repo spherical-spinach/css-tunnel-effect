@@ -70,15 +70,3 @@ const App = () => {
 }
 
 export default App
-
-// return (
-//   <div>
-//     <h2>Login</h2>
-//     <LoginForm />
-//     <h1>Kysymykset</h1>
-//     <Cards  />
-//     <h3>Lisää uusi kysymys</h3>
-//     <NewCard />
-//     <Footer></Footer>
-//  </div>
-// )
