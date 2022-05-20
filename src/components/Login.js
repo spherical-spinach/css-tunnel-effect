@@ -8,7 +8,6 @@ import { selectUser } from '../reducers/userReducer'
 const Login = props => {
   const navigate = useNavigate()
   const user = useSelector(selectUser)
-  console.log('user tässä', user)
 
   // eslint-disable-next-line no-unused-vars
   const onSubmit = event => {
