@@ -15,7 +15,7 @@ const Logout = () => {
   
   return (
     <div className='logout'>
-      <h1>Tervetuloa <span>{user.username}</span> </h1>
+      <h1>Olet kirjautunut sisään nimellä:  <span>{user.username}</span> </h1>
       <button onClick= {handleLogout}>Logout</button>
     </div>
   )

@@ -6,21 +6,6 @@ import partReducer from './reducers/partReducer'
 import chosenCourseReducer from './reducers/chosenCourseReducer'
 import userReducer from './reducers/userReducer'
 
-// import storage from 'redux-persist/lib/storage'
-// import { combineReducers } from 'redux'
-// import {
-//   persistReducer,
-// } from 'redux-persist'
-
-// const persistConfig = {
-//   key: 'counter',
-//   storage,
-// }
-
-// const reducers = combineReducers({ counter: counterSlice })
-
-// const persistedReducer = persistReducer(persistConfig, reducers)
-
 const store = configureStore({
   reducer: {
     questions: questionReducer,
