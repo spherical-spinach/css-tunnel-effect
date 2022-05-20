@@ -1,13 +1,23 @@
 import { Link, useNavigate } from 'react-router-dom'
 import '../css/Home.css'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../reducers/userReducer'
 
 const Home = () => {
   const navigate = useNavigate()
-  //this is a cheap mock-login functionality!
-  //be sure to delete this later when
-  //implementing actual login functionality!
-  const loggedIn = false
-  const username = 'Amelia'
+  const user = useSelector(selectUser)
+  console.log(user)
+
+  const loggedIn = 
+    user !== null
+      ? true
+      : false
+
+  const username =
+    loggedIn === true
+      ? user.username
+      : 'joku muu'
+
 
   return (
     <div className="homeContainer">
