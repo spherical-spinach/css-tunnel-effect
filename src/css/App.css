@@ -14,6 +14,8 @@ body {
   --secondary-color: grey;
   --contrast-color: #ffffff;
   --accent-color: orange;
+  --error-color: rgb(255, 132, 132);
+  --success-color: rgb(113, 255, 113);
   height: 100%;
 }
 

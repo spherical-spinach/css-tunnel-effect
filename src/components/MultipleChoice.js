@@ -1,39 +1,30 @@
 import { Formik, Form } from 'formik'
+import { useState } from 'react'
 
 import MultipleChoiceQuestion from './MultipleChoiceQuestion'
 import '../css/MultipleChoice.css'
 
-/**
- * Kun submit tapahtuu, halutaan tietää
- * A: Mitä on painettu
- * B: Mitä olisi pitänyt painaa?
- *
- * JOS nämä ovat sama, niin näytetään vihreä
- * tausta oikean vaihtoehdon kohdalla
- *
- * JOS nämä ovat eri, niin näytetään LISÄKSI
- * punainen tausta valinnan kohdalla
- *
- * Eli jokaisen kysymyksen kohdalla halutaan
- *
- *
- *
- *
- */
-
 const MultipleChoice = ({ questions, initialValues }) => {
-  console.log('täs nää:', initialValues)
+  const [submitStyles, setSubmitStyles] = useState('')
   return (
     <div>
       <Formik
         initialValues={initialValues}
         onSubmit={values => {
-          alert(JSON.stringify(values, null, 2))
+          if (Object.keys(values).length === questions.length) {
+            setSubmitStyles(values)
+          } else {
+            alert('ENNEN TARKISTAMISTA VASTAA ENSIN KAIKKIIN KYSYMYKSIIN')
+          }
         }}
       >
         <Form>
           {questions.map(question => (
-            <MultipleChoiceQuestion question={question} key={question.id} />
+            <MultipleChoiceQuestion
+              key={question.id}
+              question={question}
+              submitStyles={submitStyles}
+            />
           ))}
           <button type="submit">TARKISTA</button>
         </Form>
