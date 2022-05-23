@@ -14,7 +14,7 @@
 }
 
 .accordionContent {
-  border: 0.5rem solid var(--main-color);
+  border: 0.1rem solid var(--secondary-color);
   border-top: 0px;
 }
 
