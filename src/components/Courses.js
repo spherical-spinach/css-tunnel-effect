@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 
-const Course = ({ course }) => {
-  return <li className="course">{course.courseId.name}</li>
-}
+const Course = ({ course }) => (
+  <li className="course">{course.courseId.name}</li>
+)
 
 const Courses = () => {
   const courses = useSelector(state => state.questions)

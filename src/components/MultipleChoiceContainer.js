@@ -1,9 +1,8 @@
+import { useSelector } from 'react-redux'
 import MultipleChoice from './MultipleChoice'
 
-import { useSelector } from 'react-redux'
-
 const MultipleChoiceContainer = () => {
-  let initialValues = {}
+  const initialValues = {}
   const questions = useSelector(state => state.questions)
 
   return (

@@ -1,6 +1,7 @@
+/* eslint-disable no-param-reassign */
 import { useDispatch } from 'react-redux'
-import { loginUser } from '../reducers/userReducer'
 import { Form, Button } from 'react-bootstrap'
+import { loginUser } from '../reducers/userReducer'
 
 const LoginForm = () => {
   const dispatch = useDispatch()

@@ -8,7 +8,7 @@ const BackDrop = ({ backDropClickHandler }) => (
     role="button"
     aria-label="Close side drawer"
     tabIndex="0"
-  ></div>
+  />
 )
 
 export default BackDrop

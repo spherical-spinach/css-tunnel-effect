@@ -1,6 +1,5 @@
+import { useDispatch, useSelector } from 'react-redux'
 import { logoutUser, selectUser } from '../reducers/userReducer'
-import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
 
 const Logout = () => {
   const user = useSelector(selectUser)
@@ -16,7 +15,14 @@ const Logout = () => {
         Olet kirjautunut sisään nimellä:
         <span>{user.username}</span>{' '}
       </h1>
-      <button onClick={handleLogout}>Logout</button>
+      <button
+        type="button"
+        onClick={handleLogout}
+        onKeyPress={handleLogout}
+        tabIndex={0}
+      >
+        Logout
+      </button>
     </div>
   )
 }

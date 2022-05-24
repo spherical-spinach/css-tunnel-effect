@@ -1,11 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import Hamburger from 'hamburger-react'
+import { selectUser } from '../reducers/userReducer'
 
 import '../css/NavBar.css'
 import logo from '../images/logopohja.jpg'
-
-import { useSelector } from 'react-redux'
-import { selectUser } from '../reducers/userReducer'
 
 const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
