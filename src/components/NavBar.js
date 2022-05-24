@@ -13,7 +13,13 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
 
   return (
     <div className="NavBar">
-      <div className="HamburgerMenu" onClick={drawerToggleClickHandler}>
+      <div
+        className="HamburgerMenu"
+        onClick={drawerToggleClickHandler}
+        onKeyPress={drawerToggleClickHandler}
+        role="button"
+        tabIndex={0}
+      >
         <Hamburger toggled={hamburgerIsOpen} />
       </div>
       <div className="NavBarItemsContainer">
@@ -30,9 +36,21 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
         <Link className="NavBarItem" to="/login">
           {user ? 'kirjaudu ulos' : 'kirjaudu sisään'}
         </Link>
-        {user ? <span className = "NavBarItemUser">{user.username}</span> : <Link className="NavBarItem" to="/register">luo tili</Link>}
+        {user ? (
+          <span className="NavBarItemUser">{user.username}</span>
+        ) : (
+          <Link className="NavBarItem" to="/register">
+            luo tili
+          </Link>
+        )}
       </div>
-      <div className="logoContainer" onClick={() => navigate('/')}>
+      <div
+        className="logoContainer"
+        onClick={() => navigate('/')}
+        onKeyPress={() => navigate('/')}
+        role="button"
+        tabIndex={0}
+      >
         <img className="logo" src={logo} alt="logo" />
       </div>
     </div>

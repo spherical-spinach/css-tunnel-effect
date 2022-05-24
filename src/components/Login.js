@@ -4,7 +4,6 @@ import Logout from './Logout'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../reducers/userReducer'
 
-
 const Login = props => {
   const navigate = useNavigate()
   const user = useSelector(selectUser)
@@ -16,11 +15,7 @@ const Login = props => {
     navigate('/')
   }
 
-  return (
-    <div>
-      {user ? <Logout /> : <LoginForm />}
-    </div>
-  )
+  return <div>{user ? <Logout /> : <LoginForm />}</div>
 }
 
 export default Login

@@ -60,7 +60,13 @@ const Accordion = ({ title }) => {
   }
   return (
     <div className="accordionContainer">
-      <div className="accordionHead" onClick={() => setShow(!show)}>
+      <div
+        className="accordionHead"
+        onClick={() => setShow(!show)}
+        onKeyPress={() => setShow(!show)}
+        role="button"
+        tabIndex={0}
+      >
         <h2>{title}</h2>
         <div className={triangleClasses} />
       </div>
