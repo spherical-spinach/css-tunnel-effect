@@ -11,7 +11,7 @@ import Practice2 from './Practice2'
 
 const Routes = () => {
   return (
-    <div>
+    <div className="contentContainer">
       <RouterRoutes>
         <Route path="/questions" element={<Questions />} />
         <Route path="/courses" element={<Courses />} />

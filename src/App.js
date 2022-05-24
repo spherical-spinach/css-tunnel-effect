@@ -1,14 +1,7 @@
 // /* eslint-disable no-unused-vars */
 
-//commented parts are a reference for getting data
-//from Redux-store
-
 import { useEffect, useState } from 'react'
-import {
-  useDispatch,
-  // useStore,
-  // useSelector
-} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import './css/App.css'
@@ -37,7 +30,6 @@ const App = () => {
     // console.log('tässä store: ', store.getState())
   }, [dispatch])
 
-
   const drawerToggleClickHandler = () => {
     setSideDrawerOpen(!sideDrawerOpen)
   }
@@ -48,18 +40,19 @@ const App = () => {
 
   return (
     <Router>
-      <NavBar
-        hamburgerIsOpen={sideDrawerOpen}
-        drawerToggleClickHandler={drawerToggleClickHandler}
-      />
-      <SideDrawer
-        show={sideDrawerOpen}
-        drawerToggleClickHandler={drawerToggleClickHandler}
-      />
-      {sideDrawerOpen && (
-        <BackDrop backDropClickHandler={backDropClickHandler} />
-      )}
       <div className="appContainer">
+        <NavBar
+          hamburgerIsOpen={sideDrawerOpen}
+          drawerToggleClickHandler={drawerToggleClickHandler}
+        />
+        <SideDrawer
+          show={sideDrawerOpen}
+          drawerToggleClickHandler={drawerToggleClickHandler}
+        />
+        {sideDrawerOpen && (
+          <BackDrop backDropClickHandler={backDropClickHandler} />
+        )}
+
         <Routes />
         <div className="footer">
           <i>paasykoetreenit.fi</i>

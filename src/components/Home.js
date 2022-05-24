@@ -1,31 +1,29 @@
 import { Link, useNavigate } from 'react-router-dom'
 import '../css/Home.css'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../reducers/userReducer'
 
 const Home = () => {
   const navigate = useNavigate()
-  //this is a cheap mock-login functionality!
-  //be sure to delete this later when
-  //implementing actual login functionality!
-  const loggedIn = false
-  const username = 'Amelia'
+  const user = useSelector(selectUser)
 
   return (
     <div className="homeContainer">
       <h2 className="header">PÄÄSYKOETREENIT</h2>
-      {loggedIn ? (
+      {user ? (
         <h4 className="subHeader">
-          Olet kirjautunut sisään käyttäjänimellä {username}
+          Olet kirjautunut sisään käyttäjänimellä {user.username}
         </h4>
       ) : (
         <h4 className="subHeader">
           <Link to="/login">Kirjaudu sisään</Link> tai{' '}
-          <Link to="/courses">aloita harjoittelu</Link> kirjautumatta.
+          aloita harjoittelu:
         </h4>
       )}
       <div className="middleButton" onClick={() => navigate('/practice')}>
         <h1 className="middleButtonText">Aloita harjoittelu</h1>
       </div>
-      {!loggedIn && (
+      {!user && (
         <h4 className="bottomText">
           Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
         </h4>
