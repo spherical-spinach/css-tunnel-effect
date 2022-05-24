@@ -1,10 +1,7 @@
-const Question = () => {
-  return (
-    <div className="question">
-      <h5></h5>
-      <div />
-    </div>
-  )
-}
+const Question = () => (
+  <div className="question">
+    <div />
+  </div>
+)
 
 export default Question

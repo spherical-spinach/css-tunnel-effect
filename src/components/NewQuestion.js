@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable react/self-closing-comp */
+/* eslint-disable no-param-reassign */
 import { useDispatch } from 'react-redux'
 import { createQuestion } from '../reducers/questionReducer'
 
@@ -28,7 +31,7 @@ const NewQuestion = () => {
         answer2,
         answer3,
         answer4,
-      ])
+      ]),
     )
   }
 

@@ -7,8 +7,12 @@ const Revise = () => {
   return (
     <div>
       <h2>Omat treenit</h2>
-      {user ? null : <p>Et ole kirjautunut sisään. Kirjaudu sisään tai rekisteröidy saadaksesi kerrattavaa.</p>}
-
+      {user ? null : (
+        <p>
+          Et ole kirjautunut sisään. Kirjaudu sisään tai rekisteröidy saadaksesi
+          kerrattavaa.
+        </p>
+      )}
     </div>
   )
 }
