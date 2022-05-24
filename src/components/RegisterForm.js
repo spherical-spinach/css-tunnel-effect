@@ -9,10 +9,13 @@ const RegisterForm = () => {
   const addUser = async event => {
     event.preventDefault()
     const username = event.target.username.value
+    // eslint-disable-next-line no-param-reassign
     event.target.username.value = ''
     const email = event.target.email.value
+    // eslint-disable-next-line no-param-reassign
     event.target.email.value = ''
     const password = event.target.password.value
+    // eslint-disable-next-line no-param-reassign
     event.target.password.value = ''
     dispatch(registerUser(username, email, password))
   }

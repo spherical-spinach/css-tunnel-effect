@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import { useDispatch } from 'react-redux'
 // import { loginUser } from '../reducers/togglerReducer'
 
@@ -30,11 +31,15 @@ const Togglable = props => {
     // </div>
     <div>
       <div>
-        <button onClick={toggleVisibility}>{props.buttonLabel}</button>
+        <button onClick={toggleVisibility} type="button">
+          {props.buttonLabel}
+        </button>
       </div>
       <div>
         {props.children}
-        <button onClick={toggleVisibility}>cancel</button>
+        <button onClick={toggleVisibility} type="button">
+          cancel
+        </button>
       </div>
     </div>
   )
