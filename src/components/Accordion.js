@@ -1,36 +1,40 @@
-
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import '../css/Accordion.css'
 
 function returnCourse(title, course, setCourse) {
   if (title == 'KURSSI') {
-    return <div className="accordionContent"onClick={() => setCourse(course.name)}>
-      <p>{course.name}</p>
-    </div>
-  }  
+    return (
+      <div className="accordionContent" onClick={() => setCourse(course.name)}>
+        <p>{course.name}</p>
+      </div>
+    )
+  }
 }
 
 function returnParts(title, part, course) {
   console.log('course', course)
   console.log('part', part.courseId.name)
   if (title == 'OSA-ALUE') {
-    return <div className="accordionContent">
-      <p>{part.name}</p>
-    </div>
-  }  
+    return (
+      <div className="accordionContent">
+        <p>{part.name}</p>
+      </div>
+    )
+  }
 }
 
 function returnAmount(title) {
   if (title == 'KYSYMYSTEN MÄÄRÄ') {
-    return <div className="accordionContent">
-      <p>5</p>
-      <p>10</p>
-      <p>25</p>
-      <p>50</p>
-      <p>kaikki kysymykset</p>
-    </div>
-  
+    return (
+      <div className="accordionContent">
+        <p>5</p>
+        <p>10</p>
+        <p>25</p>
+        <p>50</p>
+        <p>kaikki kysymykset</p>
+      </div>
+    )
   }
 }
 
@@ -49,7 +53,7 @@ const Accordion = ({ title }) => {
   }
   return (
     <div className="accordionContainer">
-      <div className="accordionHead" onClick={() => setShow(!show)}s>
+      <div className="accordionHead" onClick={() => setShow(!show)} s>
         <h2>{title}</h2>
         <div className={triangleClasses} />
       </div>
@@ -58,7 +62,6 @@ const Accordion = ({ title }) => {
           {courses.map(course => returnCourse(title, course, setCourse))}
           {parts.map(part => returnParts(title, part, course))}
           {returnAmount(title, setShow, show)}
-
         </div>
       )}
     </div>
@@ -66,4 +69,3 @@ const Accordion = ({ title }) => {
 }
 
 export default Accordion
-
