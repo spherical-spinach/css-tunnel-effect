@@ -18,9 +18,7 @@ const Login = props => {
 
   return (
     <div>
-      {/* <h3>Kirjaudu sisään</h3>
-      <LoginForm /> */}
-      {user ? <Logout ></Logout > : <LoginForm ></LoginForm>}
+      {user ? <Logout /> : <LoginForm />}
     </div>
   )
 }

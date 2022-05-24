@@ -6,36 +6,24 @@ import { selectUser } from '../reducers/userReducer'
 const Home = () => {
   const navigate = useNavigate()
   const user = useSelector(selectUser)
-  console.log(user)
-
-  const loggedIn = 
-    user !== null
-      ? true
-      : false
-
-  const username =
-    loggedIn === true
-      ? user.username
-      : 'joku muu'
-
 
   return (
     <div className="homeContainer">
       <h2 className="header">PÄÄSYKOETREENIT</h2>
-      {loggedIn ? (
+      {user ? (
         <h4 className="subHeader">
-          Olet kirjautunut sisään käyttäjänimellä {username}
+          Olet kirjautunut sisään käyttäjänimellä {user.username}
         </h4>
       ) : (
         <h4 className="subHeader">
           <Link to="/login">Kirjaudu sisään</Link> tai{' '}
-          <Link to="/courses">aloita harjoittelu</Link> kirjautumatta.
+          aloita harjoittelu:
         </h4>
       )}
       <div className="middleButton" onClick={() => navigate('/practice')}>
         <h1 className="middleButtonText">Aloita harjoittelu</h1>
       </div>
-      {!loggedIn && (
+      {!user && (
         <h4 className="bottomText">
           Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
         </h4>
