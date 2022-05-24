@@ -38,7 +38,6 @@ const MultipleChoiceQuestion = ({ question, submitStyles }) => {
         return (
           <div className={checkboxGroupItemClassName} key={answer.id}>
             {letters[i]}: {answer.content}
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label className="custom-checkbox">
               <Field
                 type="radio"
