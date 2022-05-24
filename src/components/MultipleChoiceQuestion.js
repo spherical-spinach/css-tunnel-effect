@@ -6,6 +6,7 @@ const MultipleChoiceQuestion = ({ question, submitStyles }) => {
   let badgeClass = ''
   if (submitStyles) {
     const correctAnswer = question.answers.filter(a => a.correctAnswer)[0].id
+    // eslint-disable-next-line no-unused-expressions
     Object.values(submitStyles).includes(correctAnswer)
       ? (badgeClass = 'badge success')
       : (badgeClass = 'badge error')
@@ -25,7 +26,7 @@ const MultipleChoiceQuestion = ({ question, submitStyles }) => {
         )}
       </div>
       {question.answers.map(answer => {
-        i++
+        i += 1
         let checkboxGroupItemClassName = ''
         if (submitStyles) {
           if (answer.correctAnswer) {
@@ -37,13 +38,14 @@ const MultipleChoiceQuestion = ({ question, submitStyles }) => {
         return (
           <div className={checkboxGroupItemClassName} key={answer.id}>
             {letters[i]}: {answer.content}
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label className="custom-checkbox">
               <Field
                 type="radio"
                 name={`${question.id}`}
                 value={String(answer.id)}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark" />
             </label>
           </div>
         )
