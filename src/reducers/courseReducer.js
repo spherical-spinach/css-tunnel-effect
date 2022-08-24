@@ -7,18 +7,15 @@ const courseSlice = createSlice({
   reducers: {
     setCourses(state, action) {
       return action.payload
-    }
+    },
   },
 })
 
 export const { appendCourse, setCourses } = courseSlice.actions
 
-export const initializeCourses = () => {
-  return async dispatch => {
-    const courses = await courseService.getAll()
-    dispatch(setCourses(courses))
-  }
+export const initializeCourses = () => async dispatch => {
+  const courses = await courseService.getAll()
+  dispatch(setCourses(courses))
 }
-
 
 export default courseSlice.reducer
