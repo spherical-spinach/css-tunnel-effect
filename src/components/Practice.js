@@ -6,6 +6,7 @@ import { useState } from 'react'
 // import Accordion from './Accordion'
 import FancyList from './FancyList'
 import '../css/Practice.css'
+import '../css/Home.css'
 import { setChosenCourse } from '../reducers/chosenCourseReducer'
 import { setChosenPart } from '../reducers/chosenPartReducer'
 
@@ -60,21 +61,17 @@ const Practice = () => {
               </tr>
             </tbody>
           </table>
+          <div
+            className="middleButton"
+            onClick={() => navigate('/practice2')}
+            onKeyPress={() => navigate('/practice2')}
+            role="button"
+            tabIndex={0}
+          >
+            <p className="middleButtonText">Treenaa 2 -näkymä</p>
+          </div>
         </div>
       )}
-      {/* <Accordion title="KURSSI" />
-      <Accordion title="OSA-ALUE" />
-      <Accordion title="KYSYMYSTEN MÄÄRÄ" /> */}
-      {/* <Accordion title="KYSYMYKSET" /> */}
-      <div
-        className="practice2Button"
-        onClick={() => navigate('/practice2')}
-        onKeyPress={() => navigate('/practice2')}
-        role="button"
-        tabIndex={0}
-      >
-        <p>Treenaa 2 -näkymä</p>
-      </div>
     </div>
   )
 }
