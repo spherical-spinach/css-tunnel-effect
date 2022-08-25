@@ -48,16 +48,16 @@ const Practice = () => {
         />
       )}
       {page === 2 && (
-        <div>
-          <table>
+        <div className="chosenItemsContainer">
+          <table className="chosenCourseAndPartTable">
             <tbody>
               <tr>
-                <td>VALITTU KURSSI:</td>
-                <td>{chosenCourse.name}</td>
+                <td className="description">VALITTU KURSSI</td>
+                <td className="chosenItem">{chosenCourse.name}</td>
               </tr>
               <tr>
-                <td>VALITTU OSA-ALUE:</td>
-                <td>{chosenPart.name}</td>
+                <td className="description">VALITTU OSA-ALUE</td>
+                <td className="chosenItem">{chosenPart.name}</td>
               </tr>
             </tbody>
           </table>
