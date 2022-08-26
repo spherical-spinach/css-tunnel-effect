@@ -1,16 +1,11 @@
-/* Mobile devices */
-@media only screen and (max-width: 768px) {
-  #root {
-    height: 100%;
-  }
+html {
+  background-color: aqua;
+  min-height: 100%;
 }
 
-/* Non-mobile devices */
-@media only screen and (min-width: 769px) {
-  #root {
-    height: 100vh;
-  }
-}
+/* #root {
+  min-height: 100vh;
+} */
 
 .appContainer {
   --main-color: black;
@@ -22,7 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .footer {
@@ -39,4 +34,5 @@
 
 .contentContainer {
   height: 100%;
+  flex: 2;
 }

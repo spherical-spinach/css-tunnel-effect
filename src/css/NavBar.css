@@ -3,6 +3,7 @@
   justify-content: center;
   position: -webkit-sticky;
   position: sticky;
+  flex-shrink: 0;
   top: 0;
   width: 100%;
   height: 5rem;
