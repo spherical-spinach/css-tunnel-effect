@@ -17,8 +17,7 @@ const Home = () => {
         </h4>
       ) : (
         <h4 className="subHeader">
-          <Link to="/login">Kirjaudu sisään</Link>
-          tai aloita harjoittelu:
+          <Link to="/login">Kirjaudu sisään</Link> tai aloita harjoittelu:
         </h4>
       )}
       <div
@@ -32,8 +31,7 @@ const Home = () => {
       </div>
       {!user && (
         <h4 className="bottomText">
-          Eikö sinulla ole tunnusta?
-          <Link to="/register">Rekisteröidy</Link>
+          Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
         </h4>
       )}
     </div>

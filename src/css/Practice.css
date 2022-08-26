@@ -4,7 +4,6 @@
   margin-right: 20%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
 .chosenItemsContainer {
@@ -51,5 +50,14 @@
     margin-top: 2rem;
     margin-left: 5%;
     margin-right: 5%;
+  }
+
+  .middleButton {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .chosenCourseAndPartTable {
+    font-size: large;
   }
 }

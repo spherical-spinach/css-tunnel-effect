@@ -2,11 +2,8 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 
-// import Courses from './Courses'
-// import Accordion from './Accordion'
 import FancyList from './FancyList'
 import '../css/Practice.css'
-import '../css/Home.css'
 import { setChosenCourse } from '../reducers/chosenCourseReducer'
 import { setChosenPart } from '../reducers/chosenPartReducer'
 
@@ -68,7 +65,7 @@ const Practice = () => {
             role="button"
             tabIndex={0}
           >
-            <p className="middleButtonText">Treenaa 2 -näkymä</p>
+            <p className="middleButtonText">{'Treenaamaan ->'}</p>
           </div>
         </div>
       )}
