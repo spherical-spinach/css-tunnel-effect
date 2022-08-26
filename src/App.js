@@ -12,22 +12,19 @@ import Routes from './components/Routes'
 import NavBar from './components/NavBar'
 import SideDrawer from './components/SideDrawer'
 import BackDrop from './components/BackDrop'
+import Footer from './components/Footer'
 
 const App = () => {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
-  // const store = useStore()
   const dispatch = useDispatch()
   useEffect(async () => {
     await dispatch(initializeCourses())
-    // console.log('tässä store: ', store.getState())
   }, [dispatch])
   useEffect(async () => {
     await dispatch(initializeQuestions())
-    // console.log('tässä store: ', store.getState())
   }, [dispatch])
   useEffect(async () => {
     await dispatch(initializeParts())
-    // console.log('tässä store: ', store.getState())
   }, [dispatch])
 
   const drawerToggleClickHandler = () => {
@@ -54,9 +51,7 @@ const App = () => {
         )}
 
         <Routes />
-        <div className="footer">
-          <i>paasykoetreenit.fi</i>
-        </div>
+        <Footer />
       </div>
     </Router>
   )

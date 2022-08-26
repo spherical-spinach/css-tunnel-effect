@@ -1,5 +1,15 @@
-#root {
-  height: 100vh;
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+  #root {
+    height: 100%;
+  }
+}
+
+/* Non-mobile devices */
+@media only screen and (min-width: 769px) {
+  #root {
+    height: 100vh;
+  }
 }
 
 .appContainer {

@@ -1,16 +1,7 @@
-const Footer = () => {
-  const footerStyle = {
-    color: 'green',
-    fontStyle: 'italic',
-    fontSize: 16,
-  }
-
-  return (
-    <div style={footerStyle}>
-      <br />
-      <em>Flashcard app</em>
-    </div>
-  )
-}
+const Footer = () => (
+  <div className="footer">
+    <i>paasykoetreenit.fi</i>
+  </div>
+)
 
 export default Footer
