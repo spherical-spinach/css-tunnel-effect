@@ -8,6 +8,7 @@ import './css/App.css'
 import { initializeQuestions } from './reducers/questionReducer'
 import { initializeCourses } from './reducers/courseReducer'
 import { initializeParts } from './reducers/partReducer'
+import Notification from './components/Notification'
 import Routes from './components/Routes'
 import NavBar from './components/NavBar'
 import SideDrawer from './components/SideDrawer'
@@ -49,7 +50,7 @@ const App = () => {
         {sideDrawerOpen && (
           <BackDrop backDropClickHandler={backDropClickHandler} />
         )}
-
+        <Notification />
         <Routes />
         <Footer />
       </div>

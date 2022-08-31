@@ -6,6 +6,7 @@ import partReducer from './reducers/partReducer'
 import chosenCourseReducer from './reducers/chosenCourseReducer'
 import chosenPartReducer from './reducers/chosenPartReducer'
 import userReducer from './reducers/userReducer'
+import notificationReducer from './reducers/notificationReducer'
 
 const store = configureStore({
   reducer: {
@@ -15,6 +16,7 @@ const store = configureStore({
     chosenCourse: chosenCourseReducer,
     chosenPart: chosenPartReducer,
     user: userReducer,
+    notification: notificationReducer,
   },
   preloadedState: {
     user: localStorage.getItem('loggedFlashCardappUser')
