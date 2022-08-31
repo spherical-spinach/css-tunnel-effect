@@ -36,7 +36,7 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
           {user ? 'kirjaudu ulos' : 'kirjaudu sisään'}
         </Link>
         {user ? (
-          <span className="NavBarItemUser">{user.username}</span>
+          <span className="NavBarItemUser">{user?.username}</span>
         ) : (
           <Link className="NavBarItem" to="/register">
             luo tili

@@ -17,11 +17,9 @@ const store = configureStore({
     user: userReducer,
   },
   preloadedState: {
-    user: {
-      user: localStorage.getItem('loggedFlashCardappUser')
-        ? JSON.parse(localStorage.getItem('loggedFlashCardappUser'))
-        : null,
-    },
+    user: localStorage.getItem('loggedFlashCardappUser')
+      ? JSON.parse(localStorage.getItem('loggedFlashCardappUser'))
+      : null,
   },
 })
 

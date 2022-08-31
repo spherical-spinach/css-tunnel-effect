@@ -4,9 +4,7 @@ import registerService from '../services/register'
 
 export const userSlice = createSlice({
   name: 'user',
-  initialState: {
-    user: null,
-  },
+  initialState: {},
   reducers: {
     login: (state, action) => action.payload,
     logout: () => null,
@@ -16,7 +14,7 @@ export const userSlice = createSlice({
 
 export const { login, logout } = userSlice.actions
 
-export const selectUser = state => state.user.user
+export const selectUser = state => state.user
 
 export const loginUser = (username, password) => async dispatch => {
   const user = await loginService.login({ username, password })

@@ -12,8 +12,7 @@ const Home = () => {
       <h2 className="header">PÄÄSYKOETREENIT</h2>
       {user ? (
         <h4 className="subHeader">
-          Olet kirjautunut sisään käyttäjänimellä
-          {user.username}
+          Olet kirjautunut sisään käyttäjänimellä {`'${user?.username}'`}
         </h4>
       ) : (
         <h4 className="subHeader">

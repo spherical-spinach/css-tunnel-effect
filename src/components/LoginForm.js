@@ -1,10 +1,13 @@
 /* eslint-disable no-param-reassign */
 import { useDispatch } from 'react-redux'
 import { Form, Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+
 import { loginUser } from '../reducers/userReducer'
 
 const LoginForm = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const addUser = async event => {
     event.preventDefault()
@@ -13,6 +16,7 @@ const LoginForm = () => {
     const password = event.target.password.value
     event.target.password.value = ''
     dispatch(loginUser(username, password))
+    navigate('/')
   }
   return (
     <div>
