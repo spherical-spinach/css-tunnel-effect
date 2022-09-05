@@ -10,6 +10,12 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
   const user = useSelector(selectUser)
 
+  // const loggedInItems = currentUser => (
+  //   <Link className="NavBarItem" to="/userView">
+  //     {currentUser?.username}
+  //   </Link>
+  // )
+
   return (
     <div className="NavBar">
       <div
@@ -28,15 +34,13 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
         <Link className="NavBarItem" to="/practice">
           treenaa
         </Link>
-        {/* <Link className="NavBarItem" to="/Revise">
-          kertaa
-        </Link> */}
-
         <Link className="NavBarItem" to="/login">
           {user ? 'kirjaudu ulos' : 'kirjaudu sisään'}
         </Link>
         {user ? (
-          <span className="NavBarItemUser">{user?.username}</span>
+          <Link className="NavBarItem" to="/userView">
+            {user?.username}
+          </Link>
         ) : (
           <Link className="NavBarItem" to="/register">
             luo tili

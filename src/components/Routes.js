@@ -8,6 +8,7 @@ import Practice from './Practice'
 import Revise from './Revise'
 import RegisterUser from './RegisterUser'
 import Practice2 from './Practice2'
+import UserView from './UserView'
 
 const Routes = () => (
   <div className="contentContainer">
@@ -20,6 +21,7 @@ const Routes = () => (
       <Route path="/practice2" element={<Practice2 />} />
       <Route path="/revise" element={<Revise />} />
       <Route path="/register" element={<RegisterUser />} />
+      <Route path="/userView" element={<UserView />} />
     </RouterRoutes>
   </div>
 )

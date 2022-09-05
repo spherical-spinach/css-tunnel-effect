@@ -6,6 +6,7 @@ import FancyList from './FancyList'
 import '../css/Practice.css'
 import { setChosenCourse } from '../reducers/chosenCourseReducer'
 import { setChosenPart } from '../reducers/chosenPartReducer'
+import FancyTable from './FancyTable'
 
 const Practice = () => {
   const navigate = useNavigate()
@@ -46,18 +47,10 @@ const Practice = () => {
       )}
       {page === 2 && (
         <div className="chosenItemsContainer">
-          <table className="chosenCourseAndPartTable">
-            <tbody>
-              <tr>
-                <td className="description">VALITTU KURSSI</td>
-                <td className="chosenItem">{chosenCourse.name}</td>
-              </tr>
-              <tr>
-                <td className="description">VALITTU OSA-ALUE</td>
-                <td className="chosenItem">{chosenPart.name}</td>
-              </tr>
-            </tbody>
-          </table>
+          <FancyTable
+            headers={['VALITTU KURSSI', 'VALITTU OSA-ALUE']}
+            contents={[chosenCourse.name, chosenPart.name]}
+          />
           <div
             className="middleButton"
             onClick={() => navigate('/practice2')}

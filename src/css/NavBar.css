@@ -30,12 +30,6 @@
   text-decoration-line: none;
 }
 
-.NavBarItemUser {
-  padding: 1rem;
-  color: var(--contrast-color);
-  text-decoration-line: none;
-}
-
 .NavBarItem:hover {
   color: var(--accent-color);
 }

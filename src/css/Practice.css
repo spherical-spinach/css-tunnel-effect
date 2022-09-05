@@ -12,20 +12,6 @@
   align-items: center;
 }
 
-.chosenCourseAndPartTable {
-  font-size: xx-large;
-  margin: 1rem;
-}
-
-.chosenCourseAndPartTable .description {
-  border-right: 1px solid;
-  padding-right: 1em;
-}
-
-.chosenCourseAndPartTable .chosenItem {
-  padding-left: 1em;
-}
-
 /* Smaller desktop devices */
 @media only screen and (max-width: 1300px) {
   .practiceContainer {
@@ -55,9 +41,5 @@
   .middleButton {
     width: 10rem;
     height: 10rem;
-  }
-
-  .chosenCourseAndPartTable {
-    font-size: large;
   }
 }
