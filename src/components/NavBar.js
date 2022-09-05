@@ -10,12 +10,6 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
   const user = useSelector(selectUser)
 
-  // const loggedInItems = currentUser => (
-  //   <Link className="NavBarItem" to="/userView">
-  //     {currentUser?.username}
-  //   </Link>
-  // )
-
   return (
     <div className="NavBar">
       <div

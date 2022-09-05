@@ -1,7 +1,11 @@
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import '../css/SideDrawer.css'
+import { selectUser } from '../reducers/userReducer'
 
 const SideDrawer = ({ show, drawerToggleClickHandler }) => {
+  const user = useSelector(selectUser)
+
   let drawerClasses = 'sideDrawer'
   if (show) {
     drawerClasses = 'sideDrawer open'
@@ -20,24 +24,20 @@ const SideDrawer = ({ show, drawerToggleClickHandler }) => {
           </Link>
         </li>
         <li>
-          <Link to="/Revise" onClick={drawerToggleClickHandler}>
-            kertaa
-          </Link>
-        </li>
-        <li>
           <Link to="/login" onClick={drawerToggleClickHandler}>
-            kirjautuminen
+            {user ? 'kirjaudu ulos' : 'kirjaudu sisään'}
           </Link>
         </li>
         <li>
-          <Link to="/register" onClick={drawerToggleClickHandler}>
-            luo tili
-          </Link>
-        </li>
-        <li>
-          <Link to="/practice" onClick={drawerToggleClickHandler}>
-            treenaa
-          </Link>
+          {user ? (
+            <Link to="/userView" onClick={drawerToggleClickHandler}>
+              {user?.username}
+            </Link>
+          ) : (
+            <Link to="/register" onClick={drawerToggleClickHandler}>
+              luo tili
+            </Link>
+          )}
         </li>
       </ul>
     </nav>
