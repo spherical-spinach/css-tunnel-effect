@@ -9,12 +9,10 @@ const MultipleChoiceContainer = () => {
   const initialValues = {}
 
   return (
-    <div>
-      <MultipleChoice
-        questions={filteredQuestions}
-        initialValues={initialValues}
-      />
-    </div>
+    <MultipleChoice
+      questions={filteredQuestions}
+      initialValues={initialValues}
+    />
   )
 }
 

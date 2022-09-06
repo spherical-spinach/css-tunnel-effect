@@ -1,6 +1,5 @@
-/* eslint-disable no-param-reassign */
 import { useDispatch } from 'react-redux'
-import { Form, Button } from 'react-bootstrap'
+import { Formik, Form, Field } from 'formik'
 import { useNavigate } from 'react-router-dom'
 
 import { loginUser } from '../reducers/userReducer'
@@ -9,26 +8,30 @@ const LoginForm = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const addUser = async event => {
-    event.preventDefault()
-    const username = event.target.username.value
-    event.target.username.value = ''
-    const password = event.target.password.value
-    event.target.password.value = ''
+  const handleSubmit = ({ username, password }) => {
     dispatch(loginUser(username, password))
     navigate('/')
   }
+
   return (
     <div>
-      <form onSubmit={addUser}>
-        <Form.Group>
-          <Form.Label>käyttäjätunnus tai sähköposti:</Form.Label>
-          <Form.Control type="text" name="username" />
-          <Form.Label>salasana:</Form.Label>
-          <Form.Control type="password" name="password" />
-          <Button type="submit">kirjaudu</Button>
-        </Form.Group>
-      </form>
+      <Formik
+        initialValues={{ username: '', password: '' }}
+        onSubmit={handleSubmit}
+      >
+        <Form>
+          <label htmlFor="username">Käyttäjätunnus tai sähköposti:</label>
+          <br />
+          <Field type="text" name="username" />
+          <br />
+          <label htmlFor="password">Salasana:</label>
+          <br />
+          <Field type="password" name="password" />
+          <br />
+          <br />
+          <button type="submit">KIRJAUDU</button>
+        </Form>
+      </Formik>
     </div>
   )
 }
