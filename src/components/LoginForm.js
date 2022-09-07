@@ -14,25 +14,23 @@ const LoginForm = () => {
   }
 
   return (
-    <div>
-      <Formik
-        initialValues={{ username: '', password: '' }}
-        onSubmit={handleSubmit}
-      >
-        <Form>
-          <label htmlFor="username">Käyttäjätunnus tai sähköposti:</label>
-          <br />
-          <Field type="text" name="username" />
-          <br />
-          <label htmlFor="password">Salasana:</label>
-          <br />
-          <Field type="password" name="password" />
-          <br />
-          <br />
-          <button type="submit">KIRJAUDU</button>
-        </Form>
-      </Formik>
-    </div>
+    <Formik
+      initialValues={{ username: '', password: '' }}
+      onSubmit={handleSubmit}
+    >
+      <Form>
+        <label htmlFor="username">Käyttäjätunnus tai sähköposti:</label>
+        <br />
+        <Field type="text" name="username" />
+        <br />
+        <label htmlFor="password">Salasana:</label>
+        <br />
+        <Field type="password" name="password" />
+        <br />
+        <br />
+        <button type="submit">KIRJAUDU</button>
+      </Form>
+    </Formik>
   )
 }
 
