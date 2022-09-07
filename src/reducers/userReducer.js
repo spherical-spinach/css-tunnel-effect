@@ -49,6 +49,7 @@ export const { register } = userSlice.actions
 
 export const registerUser = (username, email, password) => async dispatch => {
   const user = await registerService.register(username, email, password)
+  console.log('täs userReducerin registerUserin palauttama user: ', user)
   dispatch(register(user))
 }
 

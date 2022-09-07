@@ -30,6 +30,8 @@ const RegisterForm = () => {
         <label htmlFor="password">Salasana:</label>
         <br />
         <Field type="password" name="password" />
+        <br />
+        <button type="submit">REKISTERÖIDY</button>
       </Form>
     </Formik>
   )
