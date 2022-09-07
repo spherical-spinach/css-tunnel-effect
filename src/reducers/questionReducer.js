@@ -16,11 +16,9 @@ const questionSlice = createSlice({
 
 export const { appendQuestion, setQuestions } = questionSlice.actions
 
-export const initializeQuestions = () => {
-  return async dispatch => {
-    const questions = await questionService.getAll()
-    dispatch(setQuestions(questions))
-  }
+export const initializeQuestions = () => async dispatch => {
+  const questions = await questionService.getAll()
+  dispatch(setQuestions(questions))
 }
 
 export const createQuestion = (
@@ -29,7 +27,8 @@ export const createQuestion = (
   questionTypeId,
   content,
   answers,
-  id
+  id,
+  // eslint-disable-next-line arrow-body-style
 ) => {
   return async dispatch => {
     const newQuestion = await questionService.createNew(
@@ -38,7 +37,7 @@ export const createQuestion = (
       questionTypeId,
       content,
       answers,
-      id
+      id,
     )
     dispatch(appendQuestion(newQuestion))
   }

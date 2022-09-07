@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 const baseUrl = '/api/questions'
 // const baseUrl = 'http://localhost:3001/questions'
 
@@ -21,9 +22,16 @@ const createNew = async (
   questionTypeId,
   question,
   answers,
-  id
+  id,
 ) => {
-  const object = { courseId, partId, questionTypeId, question, answers, id }
+  const object = {
+    courseId,
+    partId,
+    questionTypeId,
+    question,
+    answers,
+    id,
+  }
   const response = await axios.post(baseUrl, object)
   return response.data
 }

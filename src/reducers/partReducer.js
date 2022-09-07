@@ -7,18 +7,15 @@ const partSlice = createSlice({
   reducers: {
     setParts(state, action) {
       return action.payload
-    }
+    },
   },
 })
 
 export const { appendPart, setParts } = partSlice.actions
 
-export const initializeParts = () => {
-  return async dispatch => {
-    const parts = await partService.getAll()
-    dispatch(setParts(parts))
-  }
+export const initializeParts = () => async dispatch => {
+  const parts = await partService.getAll()
+  dispatch(setParts(parts))
 }
-
 
 export default partSlice.reducer

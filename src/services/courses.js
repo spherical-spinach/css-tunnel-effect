@@ -1,6 +1,6 @@
 import axios from 'axios'
-const baseUrl = '/api/courses'
 
+const baseUrl = '/api/courses'
 
 const getAll = async () => {
   const response = await axios.get(baseUrl)
@@ -13,12 +13,11 @@ const getAll = async () => {
 //   return response.data
 // }
 
-
 // const update = (id, newObject) => {
 //   const request = axios.put(`${baseUrl}/${id}`, newObject)
 //   return request.then(response => response.data)
 // }
 
-export default { 
-  getAll
+export default {
+  getAll,
 }
