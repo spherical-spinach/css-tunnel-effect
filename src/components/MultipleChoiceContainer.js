@@ -1,11 +1,15 @@
+/* eslint-disable function-paren-newline */
 import { useSelector } from 'react-redux'
 import MultipleChoice from './MultipleChoice'
 
 const MultipleChoiceContainer = () => {
   const questions = useSelector(state => state.questions)
-  const chosenPart = useSelector(state => state.chosenPart)
+  const chosenParts = useSelector(state => state.chosenParts)
 
-  const filteredQuestions = questions.filter(q => q.partId.id === chosenPart.id)
+  const filteredQuestions = questions.filter(q =>
+    // eslint-disable-next-line implicit-arrow-linebreak
+    chosenParts.map(part => part.id).includes(q.partId.id),
+  )
   const initialValues = {}
 
   return (

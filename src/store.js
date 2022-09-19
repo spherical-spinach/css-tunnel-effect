@@ -4,7 +4,7 @@ import questionReducer from './reducers/questionReducer'
 import courseReducer from './reducers/courseReducer'
 import partReducer from './reducers/partReducer'
 import chosenCourseReducer from './reducers/chosenCourseReducer'
-import chosenPartReducer from './reducers/chosenPartReducer'
+import chosenPartsReducer from './reducers/chosenPartsReducer'
 import userReducer from './reducers/userReducer'
 import notificationReducer from './reducers/notificationReducer'
 
@@ -14,7 +14,7 @@ const store = configureStore({
     courses: courseReducer,
     parts: partReducer,
     chosenCourse: chosenCourseReducer,
-    chosenPart: chosenPartReducer,
+    chosenParts: chosenPartsReducer,
     user: userReducer,
     notification: notificationReducer,
   },

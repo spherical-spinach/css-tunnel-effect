@@ -47,6 +47,10 @@
   transform: rotate(180deg) translateY(3px);
 }
 
+.accordionContent.selectedContent {
+  background-color: var(--secondary-color);
+}
+
 /* Desktop devices */
 @media only screen and (min-width: 769px) {
   .accordionContent > p:hover {

@@ -5,7 +5,7 @@ import { useState } from 'react'
 import FancyList from './FancyList'
 import '../css/Practice.css'
 import { setChosenCourse } from '../reducers/chosenCourseReducer'
-import { setChosenPart } from '../reducers/chosenPartReducer'
+import { setChosenParts } from '../reducers/chosenPartsReducer'
 import FancyTable from './FancyTable'
 
 const Practice = () => {
@@ -15,7 +15,8 @@ const Practice = () => {
   const courses = useSelector(state => state.courses)
   const parts = useSelector(state => state.parts)
   const chosenCourse = useSelector(state => state.chosenCourse)
-  const chosenPart = useSelector(state => state.chosenPart)
+  const chosenParts = useSelector(state => state.chosenParts)
+  const [partsToBeDispatched, setPartsToBeDispatched] = useState([])
 
   const filteredParts = parts.filter(p => p.courseId.id === chosenCourse.id)
 
@@ -24,8 +25,20 @@ const Practice = () => {
     setPage(1)
   }
 
-  const handlePartSelection = selectedPart => {
-    dispatch(setChosenPart(selectedPart))
+  const handlePartClick = selectedPart => {
+    if (partsToBeDispatched.includes(selectedPart)) {
+      const newPartsToBeDispatched = partsToBeDispatched.filter(
+        part => part.id !== selectedPart.id,
+      )
+      setPartsToBeDispatched(newPartsToBeDispatched)
+    } else {
+      const newPartsToBeDispatched = [...partsToBeDispatched, selectedPart]
+      setPartsToBeDispatched(newPartsToBeDispatched)
+    }
+  }
+
+  const handlePartSelection = () => {
+    dispatch(setChosenParts(partsToBeDispatched))
     setPage(2)
   }
 
@@ -39,17 +52,33 @@ const Practice = () => {
         />
       )}
       {page === 1 && (
-        <FancyList
-          title="VALITSE OSA-ALUE"
-          options={filteredParts}
-          optionClickHandler={handlePartSelection}
-        />
+        <div>
+          <FancyList
+            title="VALITSE OSA-ALUE"
+            options={filteredParts}
+            optionClickHandler={handlePartClick}
+          />
+
+          <div>
+            <p>
+              Valitut osat: {partsToBeDispatched.map(part => `${part.name} `)}
+            </p>
+          </div>
+          <div>
+            <button type="button" onClick={handlePartSelection}>
+              Seuraava
+            </button>
+          </div>
+        </div>
       )}
       {page === 2 && (
         <div className="chosenItemsContainer">
           <FancyTable
             headers={['VALITTU KURSSI', 'VALITTU OSA-ALUE']}
-            contents={[chosenCourse.name, chosenPart.name]}
+            contents={[
+              chosenCourse.name,
+              chosenParts.map(part => `${part.name} `),
+            ]}
           />
           <div
             className="middleButton"
