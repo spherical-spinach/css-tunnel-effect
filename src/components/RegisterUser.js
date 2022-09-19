@@ -3,14 +3,15 @@
 import { Link } from 'react-router-dom'
 
 import RegisterForm from './RegisterForm'
+import '../css/Form.css'
 
 const RegisterUser = () => (
-  <div>
-    <h2>Luo uusi käyttäjä</h2>
-    <p>
-      Jos sinulla on jo tili, <Link to="/login">kirjaudu sisään</Link>.
-    </p>
+  <div className="registerViewContainer">
     <RegisterForm />
+    <h2>Onko sinulla jo tili?</h2>
+    <p>
+      Jos on, <Link to="/login">kirjaudu sisään</Link>.
+    </p>
   </div>
 )
 
