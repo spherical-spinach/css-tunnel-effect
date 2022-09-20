@@ -1,4 +1,4 @@
-import '../css/Accordion.css'
+import '../css/FancyList.css'
 import { useState } from 'react'
 
 const FancyList = ({ title, options, optionClickHandler }) => {
@@ -18,8 +18,8 @@ const FancyList = ({ title, options, optionClickHandler }) => {
   }
 
   return (
-    <div className="accordionContainer">
-      <div className="accordionHead">
+    <div className="fancyListContainer">
+      <div className="fancyListHeader">
         <h2>{title}</h2>
       </div>
       {options.map(o => (
@@ -27,8 +27,8 @@ const FancyList = ({ title, options, optionClickHandler }) => {
           key={o.id}
           className={
             selectedOptions.includes(o)
-              ? 'accordionContent selectedContent'
-              : 'accordionContent'
+              ? 'fancyListContent selectedContent'
+              : 'fancyListContent'
           }
           onClick={() => fancyClickHandler(o)}
           onKeyPress={() => fancyClickHandler(o)}

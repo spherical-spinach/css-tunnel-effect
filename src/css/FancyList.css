@@ -1,0 +1,58 @@
+.fancyListContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.fancyListHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  padding: 1rem;
+  padding-left: 4rem;
+}
+
+.fancyListContent {
+  border: 0.1rem solid var(--secondary-color);
+  border-top: 0px;
+}
+
+.fancyListContent > p {
+  padding-left: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0rem;
+}
+
+.fancyListHeader > h2 {
+  color: var(--contrast-color);
+}
+
+.fancyListContent.selectedContent {
+  background-color: var(--secondary-color);
+}
+
+/* Desktop devices */
+@media only screen and (min-width: 769px) {
+  .fancyListContent > p:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+/* Bigger mobile devices */
+@media only screen and (max-width: 768px) {
+  .fancyListContent > p:active {
+    background-color: var(--secondary-color);
+  }
+}
+
+/* Smaller mobile devices */
+@media only screen and (max-width: 600px) {
+  .fancyListHeader {
+    padding-left: 1rem;
+  }
+  .fancyListContent > p {
+    padding-left: 1rem;
+  }
+}

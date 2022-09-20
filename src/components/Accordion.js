@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import '../css/Accordion.css'
+// import '../css/Accordion.css'
 
 function returnCourse(title, course, setCourse) {
   if (title === 'KURSSI') {
