@@ -24,13 +24,6 @@ const RegisterForm = () => {
   const navigate = useNavigate()
 
   const handleSubmit = ({ username, email, password }) => {
-    console.log(`Tässä 
-    
-    username: ${username}
-    email: ${email}
-    password: ${email}
-    
-    `)
     dispatch(registerUser(username, email, password))
     navigate('/')
   }

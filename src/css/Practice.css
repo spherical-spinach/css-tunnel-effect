@@ -1,9 +1,7 @@
 .practiceContainer {
-  margin-top: 2rem;
   margin-left: 20%;
   margin-right: 20%;
-  display: flex;
-  flex-direction: column;
+  width: 50%;
 }
 
 .chosenItemsContainer {
@@ -15,27 +13,27 @@
 /* Smaller desktop devices */
 @media only screen and (max-width: 1300px) {
   .practiceContainer {
-    margin-top: 2rem;
     margin-left: 15%;
     margin-right: 15%;
+    width: 70%;
   }
 }
 
 /* Even smaller desktop devices */
 @media only screen and (max-width: 1000px) {
   .practiceContainer {
-    margin-top: 2rem;
     margin-left: 10%;
     margin-right: 10%;
+    width: 80%;
   }
 }
 
 /* Mobile devices */
 @media only screen and (max-width: 768px) {
   .practiceContainer {
-    margin-top: 2rem;
     margin-left: 5%;
     margin-right: 5%;
+    width: 90%;
   }
 
   .middleButton {
