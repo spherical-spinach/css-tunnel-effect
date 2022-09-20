@@ -1,7 +1,8 @@
-.registerViewContainer {
+.formViewContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .formContainer {
@@ -65,4 +66,16 @@
   margin-right: 10%;
   margin-left: 10%;
   margin-top: 1rem;
+}
+
+/* Small mobile devices */
+@media only screen and (max-width: 520px) {
+  .formViewContainer {
+    padding: 1rem;
+    padding-top: 0;
+  }
+  .formContainer {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

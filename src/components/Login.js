@@ -6,7 +6,10 @@ import Logout from './Logout'
 
 const Login = () => {
   const user = useSelector(selectUser)
-  return <div>{user ? <Logout /> : <LoginForm />}</div>
+  if (user) {
+    return <Logout />
+  }
+  return <LoginForm />
 }
 
 export default Login

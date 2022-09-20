@@ -21,36 +21,38 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="formContainer">
-      <div className="formHeader">
-        <h2>Kirjaudu sisään</h2>
-      </div>
-      <div className="formBody">
-        <Formik
-          initialValues={{ username: '', password: '' }}
-          onSubmit={handleSubmit}
-          validationSchema={validationSchema}
-        >
-          {({ errors, touched }) => (
-            <Form>
-              <div className="fieldContainer">
-                <label htmlFor="username">Käyttäjänimi</label>
-                <Field type="text" name="username" />
-                {errors.username && touched.username ? (
-                  <div className="fieldError">{errors.username}</div>
-                ) : null}
-              </div>
-              <div className="fieldContainer">
-                <label htmlFor="password">Käyttäjänimi</label>
-                <Field type="password" name="password" />
-                {errors.password && touched.password ? (
-                  <div className="fieldError">{errors.password}</div>
-                ) : null}
-              </div>
-              <button type="submit">KIRJAUDU</button>
-            </Form>
-          )}
-        </Formik>
+    <div className="formViewContainer">
+      <div className="formContainer">
+        <div className="formHeader">
+          <h2>Kirjaudu sisään</h2>
+        </div>
+        <div className="formBody">
+          <Formik
+            initialValues={{ username: '', password: '' }}
+            onSubmit={handleSubmit}
+            validationSchema={validationSchema}
+          >
+            {({ errors, touched }) => (
+              <Form>
+                <div className="fieldContainer">
+                  <label htmlFor="username">Käyttäjänimi</label>
+                  <Field type="text" name="username" />
+                  {errors.username && touched.username ? (
+                    <div className="fieldError">{errors.username}</div>
+                  ) : null}
+                </div>
+                <div className="fieldContainer">
+                  <label htmlFor="password">Käyttäjänimi</label>
+                  <Field type="password" name="password" />
+                  {errors.password && touched.password ? (
+                    <div className="fieldError">{errors.password}</div>
+                  ) : null}
+                </div>
+                <button type="submit">KIRJAUDU</button>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </div>
     </div>
   )
