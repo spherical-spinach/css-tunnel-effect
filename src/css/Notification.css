@@ -1,21 +1,22 @@
 .notificationContainer {
   display: flex;
   position: absolute;
-  top: 4rem;
+  top: 6rem;
+  right: 1rem;
   flex-direction: column;
-  border-radius: 3%;
   align-items: center;
-  margin: 1rem 20% 0 20%;
   padding: 0.5rem;
   font-size: large;
   text-transform: uppercase;
+  background-color: lightgrey;
+  box-shadow: 8px 8px 10px #666;
 }
 
 .notificationContainer.error {
-  border: 0.2rem solid var(--error-color);
+  border-left: 0.5rem solid var(--error-color);
   background-color: var(--contrast-color);
 }
 
 .notificationContainer.success {
-  border: 0.2rem solid var(--success-color);
+  border-left: 0.5rem solid var(--success-color);
 }
