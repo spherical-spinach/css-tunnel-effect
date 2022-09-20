@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import '../css/Nofitication.css'
+import '../css/Notification.css'
 
 const Notification = () => {
   const notification = useSelector(state => state.notification)
