@@ -8,6 +8,8 @@ import './css/App.css'
 import { initializeQuestions } from './reducers/questionReducer'
 import { initializeCourses } from './reducers/courseReducer'
 import { initializeParts } from './reducers/partReducer'
+import { initializeQuestiontypes } from './reducers/questiontypeReducer'
+import { initializeAnswers } from './reducers/answerReducer'
 import Routes from './components/Routes'
 import NavBar from './components/NavBar'
 import SideDrawer from './components/SideDrawer'
@@ -25,6 +27,12 @@ const App = () => {
   }, [dispatch])
   useEffect(async () => {
     await dispatch(initializeParts())
+  }, [dispatch])
+  useEffect(async () => {
+    await dispatch(initializeQuestiontypes())
+  }, [dispatch])
+  useEffect(async () => {
+    await dispatch(initializeAnswers())
   }, [dispatch])
 
   const drawerToggleClickHandler = () => {

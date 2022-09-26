@@ -9,7 +9,10 @@ import Revise from './Revise'
 import RegisterUser from './RegisterUser'
 import Practice2 from './Practice2'
 import UserView from './UserView'
+
 import Notification from './Notification'
+
+import AddQuestions from './AddQuestions'
 
 const Routes = () => (
   <div className="contentContainer">
@@ -24,6 +27,7 @@ const Routes = () => (
       <Route path="/revise" element={<Revise />} />
       <Route path="/register" element={<RegisterUser />} />
       <Route path="/userView" element={<UserView />} />
+      <Route path="/addQuestions" element={<AddQuestions />} />
     </RouterRoutes>
   </div>
 )
