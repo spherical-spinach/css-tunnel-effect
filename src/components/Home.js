@@ -33,6 +33,9 @@ const Home = () => {
           Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
         </h4>
       )}
+      <div>
+        <Link to="/addQuestions">Lisää kysymyksiä</Link>
+      </div>
     </div>
   )
 }
