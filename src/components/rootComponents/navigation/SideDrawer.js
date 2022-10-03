@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import '../css/SideDrawer.css'
-import { selectUser } from '../reducers/userReducer'
+import '../../../css/SideDrawer.css'
+import { selectUser } from '../../../reducers/userReducer'
 
 const SideDrawer = ({ show, drawerToggleClickHandler }) => {
   const user = useSelector(selectUser)

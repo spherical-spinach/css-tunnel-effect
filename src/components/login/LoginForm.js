@@ -3,8 +3,8 @@ import { Formik, Form, Field } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import * as yup from 'yup'
 
-import { loginUser } from '../reducers/userReducer'
-import '../css/Form.css'
+import { loginUser } from '../../reducers/userReducer'
+import '../../css/Form.css'
 
 const validationSchema = yup.object().shape({
   username: yup.string().required('Käyttäjänimi ei voi olla tyhjä'),

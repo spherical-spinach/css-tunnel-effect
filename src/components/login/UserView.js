@@ -1,8 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-import FancyTable from './FancyTable'
-import '../css/UserView.css'
+import FancyTable from '../general/FancyTable'
+import '../../css/UserView.css'
 
 const UserView = () => {
   const user = useSelector(state => state.user)

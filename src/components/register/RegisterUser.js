@@ -3,7 +3,7 @@
 import { Link } from 'react-router-dom'
 
 import RegisterForm from './RegisterForm'
-import '../css/Form.css'
+import '../../css/Form.css'
 
 const RegisterUser = () => (
   <div className="formViewContainer">

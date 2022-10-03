@@ -2,11 +2,11 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react'
 
-import FancyList from './FancyList'
-import '../css/Practice.css'
-import { setChosenCourse } from '../reducers/chosenCourseReducer'
-import { setChosenParts } from '../reducers/chosenPartsReducer'
-import FancyTable from './FancyTable'
+import FancyList from '../general/FancyList'
+import '../../css/Practice.css'
+import { setChosenCourse } from '../../reducers/chosenCourseReducer'
+import { setChosenParts } from '../../reducers/chosenPartsReducer'
+import FancyTable from '../general/FancyTable'
 
 const Practice = () => {
   const navigate = useNavigate()

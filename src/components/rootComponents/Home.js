@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
-import '../css/Home.css'
+import '../../css/Home.css'
 import { useSelector } from 'react-redux'
-import { selectUser } from '../reducers/userReducer'
+import { selectUser } from '../../reducers/userReducer'
 
 const Home = () => {
   const navigate = useNavigate()

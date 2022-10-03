@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { selectUser } from '../reducers/userReducer'
+import { selectUser } from '../../reducers/userReducer'
 
 import LoginForm from './LoginForm'
 import Logout from './Logout'

@@ -2,7 +2,7 @@ import { Formik, Form } from 'formik'
 import { useState } from 'react'
 
 import MultipleChoiceQuestion from './MultipleChoiceQuestion'
-import '../css/MultipleChoice.css'
+import '../../../css/MultipleChoice.css'
 
 const MultipleChoice = ({ questions, initialValues }) => {
   const [submitStyles, setSubmitStyles] = useState('')

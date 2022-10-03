@@ -1,4 +1,4 @@
-import '../css/FancyList.css'
+import '../../css/FancyList.css'
 import { useState } from 'react'
 
 const FancyList = ({ title, options, optionClickHandler }) => {

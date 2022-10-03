@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useSelector } from 'react-redux'
 
-import MultipleChoiceContainer from './MultipleChoiceContainer'
-import '../css/Practice2.css'
+import MultipleChoiceContainer from './multipleChoice/MultipleChoiceContainer'
+import '../../css/Practice2.css'
 
 const Practice2 = () => {
   const chosenCourse = useSelector(state => state.chosenCourse)

@@ -1,4 +1,4 @@
-import '../css/BackDrop.css'
+import '../../../css/BackDrop.css'
 
 const BackDrop = ({ backDropClickHandler }) => (
   <div

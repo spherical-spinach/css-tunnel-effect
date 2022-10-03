@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 
-import '../css/FancyTable.css'
+import '../../css/FancyTable.css'
 
 const FancyTable = ({ headers, contents }) => {
   const tableData = []

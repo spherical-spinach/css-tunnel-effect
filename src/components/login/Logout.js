@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import {
   clearNotification,
   setNotification,
-} from '../reducers/notificationReducer'
-import { logoutUser, selectUser } from '../reducers/userReducer'
+} from '../../reducers/notificationReducer'
+import { logoutUser, selectUser } from '../../reducers/userReducer'
 
 const Logout = () => {
   const user = useSelector(selectUser)
