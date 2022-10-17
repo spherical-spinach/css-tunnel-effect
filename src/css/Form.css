@@ -58,6 +58,31 @@
   color: #ff595b;
 }
 
+.checkboxContainer {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.checkboxContainer > label {
+  color: #666666;
+}
+
+.termsOfUseCheckboxContainer {
+  width: 0;
+  height: 0;
+  display: flex;
+  flex-direction: row;
+  margin-left: 300rem;
+}
+
+.termsOfUseCheckboxContainer > label {
+  margin-left: 300rem;
+  width: 0;
+  height: 0;
+  color: #666666;
+}
+
 .formContainer button {
   background-color: var(--main-color);
   color: var(--contrast-color);

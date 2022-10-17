@@ -1,12 +1,22 @@
+body {
+  background-image: url('../images/background-image.jpg');
+  /* background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  ); */
+}
+
 html {
   min-height: 100%;
 }
 
 .appContainer {
-  --main-color: black;
-  --secondary-color: grey;
+  --main-color: #e7e7e7;
+  --secondary-color: rgb(128, 128, 100);
   --contrast-color: #ffffff;
-  --accent-color: orange;
+  --accent-color: rgb(219, 214, 205);
   --error-color: rgb(255, 132, 132);
   --success-color: rgb(113, 255, 113);
   display: flex;

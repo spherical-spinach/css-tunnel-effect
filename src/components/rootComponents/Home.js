@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import '../../css/Home.css'
 import { useSelector } from 'react-redux'
+// import textLogo from '../../images/textLogo.png'
 import { selectUser } from '../../reducers/userReducer'
 
 const Home = () => {
@@ -8,33 +9,44 @@ const Home = () => {
   const user = useSelector(selectUser)
 
   return (
-    <div className="homeContainer">
-      <h2 className="header">PÄÄSYKOETREENIT</h2>
-      {user ? (
-        <h4 className="subHeader">
-          Olet kirjautunut sisään käyttäjänimellä {`'${user?.username}'`}
-        </h4>
-      ) : (
-        <h4 className="subHeader">
-          <Link to="/login">Kirjaudu sisään</Link> tai aloita harjoittelu:
-        </h4>
-      )}
-      <div
-        className="middleButton"
-        onClick={() => navigate('/practice')}
-        onKeyPress={() => navigate('/practice')}
+    <div>
+      <div className="homeContainer">
+        {/* <div
+        className="textLogoContainer"
+        onClick={() => navigate('/')}
+        onKeyPress={() => navigate('/')}
         role="button"
         tabIndex={0}
       >
-        <h1 className="middleButtonText">Aloita harjoittelu</h1>
-      </div>
-      {!user && (
-        <h4 className="bottomText">
-          Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
-        </h4>
-      )}
-      <div>
-        <Link to="/addQuestions">Lisää kysymyksiä</Link>
+        <img className="textLogo" src={textLogo} alt="textLogo" />
+      </div> */}
+        <h2 className="header">PÄÄSYKOETREENIT</h2>
+        {user ? (
+          <h4 className="mainText">
+            Olet kirjautunut sisään käyttäjänimellä {`'${user?.username}'`}
+          </h4>
+        ) : (
+          <h4 className="mainText">
+            <Link to="/login">Kirjaudu sisään</Link> tai aloita harjoittelu:
+          </h4>
+        )}
+        <div
+          className="middleButton"
+          onClick={() => navigate('/practice')}
+          onKeyPress={() => navigate('/practice')}
+          role="button"
+          tabIndex={0}
+        >
+          <h1 className="middleButtonText">ALOITA</h1>
+        </div>
+        {!user && (
+          <p className="mainText">
+            Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
+          </p>
+        )}
+        <div>
+          <Link to="/addQuestions">Lisää kysymyksiä</Link>
+        </div>
       </div>
     </div>
   )

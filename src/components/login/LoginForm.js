@@ -42,7 +42,7 @@ const LoginForm = () => {
                   ) : null}
                 </div>
                 <div className="fieldContainer">
-                  <label htmlFor="password">Käyttäjänimi</label>
+                  <label htmlFor="password">Salasana</label>
                   <Field type="password" name="password" />
                   {errors.password && touched.password ? (
                     <div className="fieldError">{errors.password}</div>

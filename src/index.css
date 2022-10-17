@@ -7,6 +7,10 @@ h3 {
   color: black;
 }
 
+h4 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .question {
   color: rgb(46, 46, 46);
   padding-top: 3px;

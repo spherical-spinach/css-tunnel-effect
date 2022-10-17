@@ -7,6 +7,18 @@ import * as yup from 'yup'
 
 import { registerUser } from '../../reducers/userReducer'
 
+// from captcha.audio import AudioCaptcha
+// from captcha.image import ImageCaptcha
+
+// audio = AudioCaptcha(voicedir='/path/to/voices')
+// image = ImageCaptcha(fonts=['/path/A.ttf', '/path/B.ttf'])
+
+// data = audio.generate('1234')
+// audio.write('1234', 'out.wav')
+
+// data = image.generate('1234')
+// image.write('1234', 'out.png')
+
 const validationSchema = yup.object().shape({
   username: yup.string().required('Käyttäjänimi ei voi olla tyhjä'),
   email: yup
@@ -77,6 +89,12 @@ const RegisterForm = () => {
                     {errors.passwordConfirmation}
                   </div>
                 ) : null}
+              </div>
+              <div className="termsOfUseCheckboxContainer">
+                <label htmlFor="termsOfUse">
+                  * Olen lukenut ja hyväksyn käyttöehdot
+                </label>
+                <Field type="checkbox" name="termsOfUse" />
               </div>
               <button type="submit">REKISTERÖIDY</button>
             </Form>

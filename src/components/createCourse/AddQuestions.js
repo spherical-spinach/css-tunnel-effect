@@ -21,7 +21,8 @@ const AddQuestions = () => {
   const [page, setPage] = useState(0)
   const courses = useSelector(state => state.courses)
   const parts = useSelector(state => state.parts)
-  const questiontypes = useSelector(state => state.questiontypes)
+  // const questiontypes = useSelector(state => state.questiontypes)
+  const questiontypes = ['monivalinta', 'flashcard']
   const chosenCourse = useSelector(state => state.chosenCourse)
   const chosenQuestiontypes = useSelector(state => state.chosenQuestiontypes)
   const chosenParts = useSelector(state => state.chosenParts)
@@ -40,6 +41,7 @@ const AddQuestions = () => {
 
   const handleTypeSelection = selectedType => {
     dispatch(setChosenQuestiontypes(selectedType))
+    console.log('selectedType', selectedType)
     setPage(3)
   }
 
@@ -173,13 +175,13 @@ const AddQuestions = () => {
             contents={[
               chosenCourse.name,
               chosenParts.name,
-              chosenQuestiontypes.name,
+              chosenQuestiontypes,
             ]}
           />
           <div>
             <p>muuta valintoja</p>
           </div>
-          {chosenQuestiontypes.name === 'multiple choice' ? (
+          {chosenQuestiontypes === 'monivalinta' ? (
             <div className="formContainer">
               <div className="formHeader">
                 <h2>Lisää uusi monivalintakysymys</h2>
@@ -223,8 +225,8 @@ const AddQuestions = () => {
                       <div className="checkboxContainer">
                         <label htmlFor="isCorrect2">
                           Tämä on oikea vastaus
+                          <Field type="checkbox" name="isCorrect2" />
                         </label>
-                        <Field type="checkbox" name="isCorrect2" />
                       </div>
                       <p> </p>
                       <div className="fieldContainer">

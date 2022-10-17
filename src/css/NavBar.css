@@ -1,5 +1,5 @@
 .NavBar {
-  background-color: var(--main-color);
+  background-color: rgb(249, 249, 249);
   justify-content: center;
   position: -webkit-sticky;
   position: sticky;
@@ -26,7 +26,7 @@
 
 .NavBarItem {
   padding: 1rem;
-  color: var(--contrast-color);
+  color: rgb(0, 0, 0);
   text-decoration-line: none;
 }
 
@@ -35,6 +35,7 @@
 }
 
 .logo {
+  /* display: none; */
   height: 100%;
   position: absolute;
   top: 0px;
