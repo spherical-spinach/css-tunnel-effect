@@ -23,7 +23,7 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
       </div>
       <div className="NavBarItemsContainer">
         <Link className="NavBarItem" to="/">
-          koti
+          aloita
         </Link>
         <Link className="NavBarItem" to="/practice">
           treenaa

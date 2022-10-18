@@ -1,7 +1,7 @@
 .sideDrawer {
   height: 100%;
   background: var(--main-color);
-  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
@@ -30,13 +30,14 @@
 }
 
 .sideDrawer a {
-  color: white;
+  color: #1d1c40;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .sideDrawer a:hover,
 .sideDrawer a:active {
-  color: var(--accent-color);
+  color: rgb(47, 158, 118);
 }
 
 @media only screen and (min-width: 759px) {
