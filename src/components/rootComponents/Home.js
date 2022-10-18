@@ -1,8 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom'
 import '../../css/Home.css'
+import '../../css/CourseSquare.css'
 import { useSelector } from 'react-redux'
 // import textLogo from '../../images/textLogo.png'
 import { selectUser } from '../../reducers/userReducer'
+import laaketiede from '../../images/laaketiede.png'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -10,17 +12,11 @@ const Home = () => {
 
   return (
     <div>
+      <div className="paasykoetreenitContainer">
+        <h2 className="headerheader">PÄÄSYKOETREENIT</h2>
+      </div>
       <div className="homeContainer">
-        {/* <div
-        className="textLogoContainer"
-        onClick={() => navigate('/')}
-        onKeyPress={() => navigate('/')}
-        role="button"
-        tabIndex={0}
-      >
-        <img className="textLogo" src={textLogo} alt="textLogo" />
-      </div> */}
-        <h2 className="header">PÄÄSYKOETREENIT</h2>
+        {/* <h2 className="header">PÄÄSYKOETREENIT</h2> */}
         {user ? (
           <h4 className="mainText">
             Olet kirjautunut sisään käyttäjänimellä {`'${user?.username}'`}
@@ -44,9 +40,16 @@ const Home = () => {
             Eikö sinulla ole tunnusta? <Link to="/register">Rekisteröidy</Link>
           </p>
         )}
-        <div>
+        {/* <div>
           <Link to="/addQuestions">Lisää kysymyksiä</Link>
-        </div>
+        </div> */}
+      </div>
+      <div className="headerContainer">
+        <h2 className="headerheader">KURSSIT</h2>
+      </div>
+      <div className="courseContainer">
+        <h2 className="coursesHeader">LÄÄKETIEDE</h2>
+        <img className="courseImage" src={laaketiede} alt="course" />
       </div>
     </div>
   )
