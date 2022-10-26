@@ -8,6 +8,7 @@ import Practice2 from '../practice/Practice2'
 import UserView from '../login/UserView'
 import Notification from '../general/Notification'
 import AddQuestions from '../createCourse/AddQuestions'
+import PracticeSelectionContainer from '../practice/PracticeSelectionContainer'
 
 const Routes = () => (
   <div className="contentContainer">
@@ -20,6 +21,10 @@ const Routes = () => (
       <Route path="/register" element={<RegisterUser />} />
       <Route path="/userView" element={<UserView />} />
       <Route path="/addQuestions" element={<AddQuestions />} />
+      <Route
+        path="/practiceSelection"
+        element={<PracticeSelectionContainer />}
+      />
     </RouterRoutes>
   </div>
 )
