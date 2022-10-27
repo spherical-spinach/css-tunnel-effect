@@ -7,21 +7,22 @@
 }
 
 .formContainer {
-  width: 30rem;
+  width: 25rem;
   margin-bottom: 1rem;
 }
 
 .formHeader {
-  background-color: #1d1c40;
+  background-color: rgb(239, 239, 239);
+  font-family: 'Courier New', Courier, monospace;
   padding: 1rem;
   border-radius: 15px 15px 0px 0px;
-  border-top: 9px solid rgb(47, 158, 118);
-  border-right: 9px solid rgb(47, 158, 118);
-  border-left: 9px solid rgb(47, 158, 118);
+  border-top: 3px solid rgb(239, 239, 239);
+  border-right: 3px solid rgb(239, 239, 239);
+  border-left: 3px solid rgb(239, 239, 239);
 }
 
 .formHeader > h2 {
-  color: rgb(255, 255, 255);
+  color: rgb(4, 4, 4);
   text-transform: uppercase;
   text-align: center;
 }
@@ -30,12 +31,15 @@
   /* border-right: 2px solid var(--secondary-color);
   border-bottom: 2px solid var(--secondary-color);
   border-left: 2px solid var(--secondary-color); */
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 0.5rem;
   background-color: rgb(239, 239, 239);
   border-radius: 0px 0px 15px 15px;
-  border-bottom: 9px solid rgb(47, 158, 118);
-  border-right: 9px solid rgb(47, 158, 118);
-  border-left: 9px solid rgb(47, 158, 118);
+  border-bottom: 0px solid rgb(47, 158, 118);
+  border-right: 0px solid rgb(47, 158, 118);
+  border-left: 0px solid rgb(47, 158, 118);
 }
 
 .formContainer form {
