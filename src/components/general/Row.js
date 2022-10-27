@@ -5,7 +5,7 @@ import { useState } from 'react'
 import '../../css/row.css'
 import chevron from '../../images/chevron-right.svg'
 
-export default function Row({ item, level, children }) {
+const Row = ({ item, level, children }) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
   return (
     <div key={`section-${item.id}`}>
@@ -21,7 +21,7 @@ export default function Row({ item, level, children }) {
               alt="chevron"
             />
           )}
-          <span className="text">{item.text}</span>
+          <span className="text">{item.name[0].value}</span>
         </div>
       </div>
       <div className={`children${isCollapsed ? ' collapsed' : ''}`}>
@@ -30,3 +30,5 @@ export default function Row({ item, level, children }) {
     </div>
   )
 }
+
+export default Row

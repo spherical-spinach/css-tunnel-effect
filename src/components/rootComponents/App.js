@@ -11,12 +11,14 @@ import NavBar from './navigation/NavBar'
 import SideDrawer from './navigation/SideDrawer'
 import BackDrop from './navigation/BackDrop'
 import Footer from './Footer'
+import { initializeTreeNodes } from '../../reducers/treeNodeReducer'
 
 const App = () => {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
   const dispatch = useDispatch()
   useEffect(async () => {
     await dispatch(initializeCourses())
+    await dispatch(initializeTreeNodes())
   }, [dispatch])
 
   const drawerToggleClickHandler = () => {

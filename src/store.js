@@ -10,6 +10,7 @@ import chosenPartsReducer from './reducers/chosenPartsReducer'
 import chosenQuestiontypesReducer from './reducers/chosenQuestiontypesReducer'
 import userReducer from './reducers/userReducer'
 import notificationReducer from './reducers/notificationReducer'
+import treeNodeReducer from './reducers/treeNodeReducer'
 
 const store = configureStore({
   reducer: {
@@ -23,6 +24,7 @@ const store = configureStore({
     chosenQuestiontypes: chosenQuestiontypesReducer,
     user: userReducer,
     notification: notificationReducer,
+    treeNodes: treeNodeReducer,
   },
   preloadedState: {
     user: localStorage.getItem('loggedFlashCardappUser')
