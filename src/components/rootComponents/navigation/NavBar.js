@@ -28,6 +28,9 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
         <Link className="NavBarItem" to="/practice">
           treenaa
         </Link>
+        <Link className="NavBarItem" to="/practiceSelection">
+          treenaa-uusi
+        </Link>
         <Link className="NavBarItem" to="/login">
           {user ? 'kirjaudu ulos' : 'kirjaudu sisään'}
         </Link>

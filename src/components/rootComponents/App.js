@@ -5,34 +5,20 @@ import { useDispatch } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import '../../css/App.css'
-import { initializeQuestions } from '../../reducers/questionReducer'
 import { initializeCourses } from '../../reducers/courseReducer'
-import { initializeParts } from '../../reducers/partReducer'
-import { initializeQuestiontypes } from '../../reducers/questiontypeReducer'
-import { initializeAnswers } from '../../reducers/answerReducer'
 import Routes from './Routes'
 import NavBar from './navigation/NavBar'
 import SideDrawer from './navigation/SideDrawer'
 import BackDrop from './navigation/BackDrop'
 import Footer from './Footer'
+import { initializeTreeNodes } from '../../reducers/treeNodeReducer'
 
 const App = () => {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false)
   const dispatch = useDispatch()
   useEffect(async () => {
     await dispatch(initializeCourses())
-  }, [dispatch])
-  useEffect(async () => {
-    await dispatch(initializeQuestions())
-  }, [dispatch])
-  useEffect(async () => {
-    await dispatch(initializeParts())
-  }, [dispatch])
-  useEffect(async () => {
-    await dispatch(initializeQuestiontypes())
-  }, [dispatch])
-  useEffect(async () => {
-    await dispatch(initializeAnswers())
+    await dispatch(initializeTreeNodes())
   }, [dispatch])
 
   const drawerToggleClickHandler = () => {
