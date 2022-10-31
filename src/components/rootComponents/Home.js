@@ -60,14 +60,6 @@ const Home = () => {
           eri alojen pääsykoemateriaaleista. Lue lisää
         </h4> */}
       </div>
-      <div className="boxContainer">
-        <h2 className="header">YHTEISTYÖSSÄ VARJOVALMENNUS</h2>
-        <img
-          className="logoImage"
-          src={varjovalmennuslogo}
-          alt="Varjovalmennus logo"
-        />
-      </div>
       <div>
         <h2 className="courses">KURSSIT</h2>
       </div>
@@ -81,6 +73,14 @@ const Home = () => {
       <div className="coursesContainer">
         <h2 className="subHeader">Psykologia</h2>
         <img className="courseImage" src={psykologia} alt="course" />
+      </div>
+      <div className="boxContainer">
+        <h2 className="header">YHTEISTYÖSSÄ VARJOVALMENNUS</h2>
+        <img
+          className="logoImage"
+          src={varjovalmennuslogo}
+          alt="Varjovalmennus logo"
+        />
       </div>
     </div>
   )
