@@ -4,8 +4,8 @@ import '../../css/CourseSquare.css'
 import { useSelector } from 'react-redux'
 // import textLogo from '../../images/textLogo.png'
 import { selectUser } from '../../reducers/userReducer'
-import laaketiede from '../../images/laaketiede.png'
-import psykologia from '../../images/psykologia.png'
+import laaketiede from '../../images/laaketiede3.png'
+import psykologia from '../../images/psykologia2.png'
 import varjovalmennuslogo from '../../images/varjovalmennuslogo.png'
 
 const Home = () => {
