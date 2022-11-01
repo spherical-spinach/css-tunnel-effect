@@ -46,7 +46,7 @@
 
 .chevron {
   transition: transform 0.1s linear !important;
-  height: 20px;
+  height: 40px;
 }
 .chevron.rotated {
   transform: rotate(90deg);
