@@ -1,6 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
 import '../../css/Home.css'
-import '../../css/CourseSquare.css'
 import { useSelector } from 'react-redux'
 // import textLogo from '../../images/textLogo.png'
 import { selectUser } from '../../reducers/userReducer'
@@ -14,9 +13,6 @@ const Home = () => {
 
   return (
     <div className="homeViewContainer">
-      {/* <div className="topContainer">
-        <h2 className="header">PÄÄSYKOETREENIT</h2>
-      </div> */}
       <div className="homeContainer">
         <h2 className="header">PÄÄSYKOETREENIT</h2>
         {user ? (
@@ -29,13 +25,13 @@ const Home = () => {
           </h4>
         )}
         <div
-          className="middleButton"
+          className="startButton"
           onClick={() => navigate('/practice')}
           onKeyPress={() => navigate('/practice')}
           role="button"
           tabIndex={0}
         >
-          <h1 className="middleButtonText">TREENAA</h1>
+          <h1 className="startButtonText">TREENAA</h1>
         </div>
         {user ? (
           <p className="mainText">Katso tilastot omista treeneistäsi.</p>
@@ -66,15 +62,15 @@ const Home = () => {
       {/* <div>
         <img className="courseImage" src={laaketiede} alt="course" />
       </div> */}
-      <div className="coursesContainer">
+      <div className="coursesBoxContainer">
         <h2 className="subHeader">Lääketiede</h2>
         <img className="courseImage" src={laaketiede} alt="course" />
       </div>
-      <div className="coursesContainer">
+      <div className="coursesBoxContainer">
         <h2 className="subHeader">Psykologia</h2>
         <img className="courseImage" src={psykologia} alt="course" />
       </div>
-      <div className="boxContainer">
+      <div className="coursesBoxContainer">
         <h2 className="header">YHTEISTYÖSSÄ VARJOVALMENNUS</h2>
         <img
           className="logoImage"
