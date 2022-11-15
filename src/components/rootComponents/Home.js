@@ -3,8 +3,8 @@ import '../../css/Home.css'
 import { useSelector } from 'react-redux'
 // import textLogo from '../../images/textLogo.png'
 import { selectUser } from '../../reducers/userReducer'
-import laaketiede from '../../images/laaketiede3.png'
-import psykologia from '../../images/psykologia2.png'
+// import laaketiede from '../../images/laaketiede5.png'
+// import psykologia from '../../images/psykologia5.png'
 import varjovalmennuslogo from '../../images/varjovalmennuslogo.png'
 
 const Home = () => {
@@ -62,16 +62,16 @@ const Home = () => {
       {/* <div>
         <img className="courseImage" src={laaketiede} alt="course" />
       </div> */}
-      <div className="coursesBoxContainer">
+      <div className="boxContainer">
         <h2 className="subHeader">Lääketiede</h2>
-        <img className="courseImage" src={laaketiede} alt="course" />
+        {/* <img className="courseImage" src={laaketiede} alt="course" /> */}
       </div>
-      <div className="coursesBoxContainer">
+      <div className="boxContainer">
         <h2 className="subHeader">Psykologia</h2>
-        <img className="courseImage" src={psykologia} alt="course" />
+        {/* <img className="courseImage" src={psykologia} alt="course" /> */}
       </div>
-      <div className="coursesBoxContainer">
-        <h2 className="header">YHTEISTYÖSSÄ VARJOVALMENNUS</h2>
+      <div className="boxContainer">
+        <h2 className="subHeader">YHTEISTYÖSSÄ VARJOVALMENNUS</h2>
         <img
           className="logoImage"
           src={varjovalmennuslogo}
