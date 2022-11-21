@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .homeContainer {
   background-color: #f9f9f9;
   /* border: 4px solid #1d1c40; */
-  border-radius: 15px;
+  border-radius: 20px;
   margin-bottom: 50px;
   margin-left: 35%;
   margin-right: 35%;
@@ -19,7 +19,7 @@
   align-items: center;
   /* width: 90%; */
   /* padding-bottom: 50px; */
-  padding: 5% 5% 5% 5%;
+  padding: 2rem 0.5rem 2rem 0.5rem;
 }
 
 .homeContainer > * {
@@ -31,17 +31,13 @@
 
 .boxContainer {
   background-color: #f9f9f9;
-  border: 3px solid #f9f9f9;
-  border-radius: 15px;
-  margin-bottom: 50px;
-  margin-left: 37%;
-  margin-right: 37%;
-  padding-top: 20px;
+  border-radius: 20px;
+  margin-bottom: 80px;
+  padding: 2rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-bottom: 50px;
 }
 
 .logoImage {
@@ -50,23 +46,13 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 50%;
-  height: 50%;
+  width: 20%;
+  height: 20%;
   /* border: 3px solid rgb(68, 15, 15); */
 }
 
-.courseImage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 70%;
-  height: 70%;
-}
-
 .mainText {
-  font-family: 'Poppins';
+  font-family: 'Poppins', Times, serif;
   font-size: 120%;
   text-align: center;
   color: rgb(40, 40, 40);
@@ -76,7 +62,7 @@
 }
 
 .infoText {
-  font-family: 'Poppins';
+  font-family: 'Poppins', Times, serif;
   font-size: 120%;
   font-style: italic;
   text-align: center;
@@ -88,7 +74,7 @@
 }
 
 .highlightedText {
-  font-family: 'Poppins';
+  font-family: 'Poppins', Times, serif;
   font-size: 140%;
   text-align: center;
   margin: 0em 0em 0em 0em;
@@ -101,7 +87,7 @@
 }
 
 .linkedText {
-  font-family: 'Poppins';
+  font-family: 'Poppins', Times, serif;
   font-size: 140%;
   text-align: center;
   margin: 0em 0em 0em 0em;
@@ -155,7 +141,7 @@
 
 .startButton {
   background-color: #1d1c40;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -166,6 +152,21 @@
   padding: 0.5rem;
   font-size: x-large;
   letter-spacing: 3.5px;
+}
+.courseButton {
+  background-color: #282762;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.courseButtonText {
+  color: #f9f9f9;
+  font-family: 'Poppins', Times, serif;
+  padding: 1rem;
+  font-size: large;
+  letter-spacing: 2.5px;
+  text-transform: capitalize;
 }
 
 .bottomText {
@@ -183,6 +184,9 @@
 /* Small mobile devices */
 @media only screen and (max-width: 310px) and (min-width: 0px) {
   .startButton:hover {
+    opacity: 0.8;
+  }
+  .courseButton:hover {
     opacity: 0.8;
   }
   .homeContainer {
@@ -213,6 +217,9 @@
   .startButton:hover {
     opacity: 0.8;
   }
+  .courseButton:hover {
+    opacity: 0.8;
+  }
   .homeContainer {
     margin-left: 0%;
     margin-right: 0%;
@@ -238,6 +245,9 @@
   .startButton:hover {
     opacity: 0.8;
   }
+  .courseButton:hover {
+    opacity: 0.8;
+  }
   .homeContainer {
     margin-left: 25%;
     margin-right: 25%;
@@ -251,6 +261,9 @@
 /* Non-mobile devices */
 @media only screen and (min-width: 1281px) {
   .startButton:hover {
+    opacity: 0.8;
+  }
+  .courseButton:hover {
     opacity: 0.8;
   }
 }

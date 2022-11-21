@@ -1,15 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom'
 import '../../css/Home.css'
 import { useSelector } from 'react-redux'
-// import textLogo from '../../images/textLogo.png'
 import { selectUser } from '../../reducers/userReducer'
-// import laaketiede from '../../images/laaketiede5.png'
-// import psykologia from '../../images/psykologia5.png'
 import varjovalmennuslogo from '../../images/varjovalmennuslogo.png'
 
 const Home = () => {
   const navigate = useNavigate()
   const user = useSelector(selectUser)
+  const courses = useSelector(state => state.courses)
 
   return (
     <div className="homeViewContainer">
@@ -59,16 +57,17 @@ const Home = () => {
       <div>
         <h2 className="courses">KURSSIT</h2>
       </div>
-      {/* <div>
-        <img className="courseImage" src={laaketiede} alt="course" />
-      </div> */}
       <div className="boxContainer">
-        <h2 className="subHeader">Lääketiede</h2>
-        {/* <img className="courseImage" src={laaketiede} alt="course" /> */}
-      </div>
-      <div className="boxContainer">
-        <h2 className="subHeader">Psykologia</h2>
-        {/* <img className="courseImage" src={psykologia} alt="course" /> */}
+        {courses.map(course => (
+          <div
+            className="courseButton"
+            key={course.id}
+            role="button"
+            tabIndex={0}
+          >
+            <h2 className="courseButtonText">{course.name}</h2>
+          </div>
+        ))}
       </div>
       <div className="boxContainer">
         <h2 className="subHeader">YHTEISTYÖSSÄ VARJOVALMENNUS</h2>
