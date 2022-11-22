@@ -57,7 +57,7 @@ const Home = () => {
       <div>
         <h2 className="courses">KURSSIT</h2>
       </div>
-      <div className="boxContainer">
+      <div className="coursesContainer">
         {courses.map(course => (
           <div
             className="courseButton"
@@ -69,7 +69,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <div className="boxContainer">
+      <div className="coursesContainer">
         <h2 className="subHeader">YHTEISTYÖSSÄ VARJOVALMENNUS</h2>
         <img
           className="logoImage"

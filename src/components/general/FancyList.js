@@ -16,6 +16,8 @@ const FancyList = ({ title, options, optionClickHandler }) => {
     }
     optionClickHandler(o)
   }
+  console.log('options', options)
+  // console.log('options[0].isDeleted', options[0].isDeleted)
 
   return (
     <div className="fancyListContainer">
@@ -35,7 +37,7 @@ const FancyList = ({ title, options, optionClickHandler }) => {
           role="button"
           tabIndex={0}
         >
-          <p>{o.name}</p>
+          <p>{o.name[0].value}</p>
         </div>
       ))}
     </div>

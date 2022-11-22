@@ -20,28 +20,42 @@ const AddQuestions = () => {
   const dispatch = useDispatch()
   const [page, setPage] = useState(0)
   const courses = useSelector(state => state.courses)
-  const parts = useSelector(state => state.parts)
+  // const parts = useSelector(state => state.parts)
+  const nodes = useSelector(state => state.treeNodes)
   // const questiontypes = useSelector(state => state.questiontypes)
-  const questiontypes = ['monivalinta', 'flashcard']
+  // const questiontypes = ['monivalinta', 'flashcard']
+  const questiontypes = [
+    {
+      name: [{ value: 'flashcard' }],
+    },
+    {
+      name: [{ value: 'monivalinta' }],
+    },
+  ]
   const chosenCourse = useSelector(state => state.chosenCourse)
   const chosenQuestiontypes = useSelector(state => state.chosenQuestiontypes)
   const chosenParts = useSelector(state => state.chosenParts)
 
-  const filteredParts = parts.filter(p => p.courseId.id === chosenCourse.id)
+  // const filteredParts = parts.filter(p => p.courseId.id === chosenCourse.id)
+  const preFilteredNodes = nodes.filter(n => n.course === chosenCourse.id)
+  const filteredNodes = preFilteredNodes.filter(n => n.parent[0].value !== null)
+
+  const coursesFromNodes = nodes.filter(n => n.parent[0].value === null)
 
   const handleCourseSelection = selectedCourse => {
-    dispatch(setChosenCourse(selectedCourse))
+    const courseToBeChosen = courses.filter(c => c.id === selectedCourse.course)
+    dispatch(setChosenCourse(courseToBeChosen[0]))
     setPage(1)
   }
 
   const handlePartSelection = selectedPart => {
-    dispatch(setChosenParts(selectedPart))
+    console.log('selectedPart', selectedPart)
+    dispatch(setChosenParts(selectedPart.name[0].value))
     setPage(2)
   }
 
   const handleTypeSelection = selectedType => {
-    dispatch(setChosenQuestiontypes(selectedType))
-    console.log('selectedType', selectedType)
+    dispatch(setChosenQuestiontypes(selectedType.name[0].value))
     setPage(3)
   }
 
@@ -144,7 +158,7 @@ const AddQuestions = () => {
       {page === 0 && (
         <FancyList
           title="VALITSE KURSSI JOLLE HALUAT LISÄTÄ KYSYMYKSEN"
-          options={courses}
+          options={coursesFromNodes}
           optionClickHandler={handleCourseSelection}
         />
       )}
@@ -153,7 +167,7 @@ const AddQuestions = () => {
           <p>Valittu kurssi: {chosenCourse.name}</p>
           <FancyList
             title="VALITSE OSA-ALUE, JOLLE HALUAT LISÄTÄ KYSYMYKSEN"
-            options={filteredParts}
+            options={filteredNodes}
             optionClickHandler={handlePartSelection}
           />
         </div>
@@ -172,11 +186,7 @@ const AddQuestions = () => {
         <div className="chosenItemsContainer">
           <FancyTable
             headers={['KURSSI', 'OSA-ALUE', 'KYSYMYSTYYPPI']}
-            contents={[
-              chosenCourse.name,
-              chosenParts.name,
-              chosenQuestiontypes,
-            ]}
+            contents={[chosenCourse.name, chosenParts, chosenQuestiontypes]}
           />
           <div>
             <p>muuta valintoja</p>

@@ -1,11 +1,5 @@
 body {
   background-image: url('../images/background-image7.jpg');
-  /* background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(148, 187, 233, 1) 100%
-  ); */
 }
 
 html {
@@ -27,7 +21,7 @@ html {
 
 .footer {
   text-align: center;
-  background-color: var(--main-color);
+  background-color: #e7e7e7;
   padding: 4rem;
   margin-top: 4rem;
   width: 100%;
