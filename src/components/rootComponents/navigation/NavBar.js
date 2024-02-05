@@ -1,14 +1,11 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 import Hamburger from 'hamburger-react'
-import { selectUser } from '../../../reducers/userReducer'
 
 import '../../../css/NavBar.css'
 import logo from '../../../images/brain-click-icon.png'
 
 const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
-  const user = useSelector(selectUser)
 
   return (
     <div className="NavBar">
@@ -24,26 +21,11 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
       </div>
       <div className="NavBarItemsContainer">
         <Link className="NavBarItem" to="/">
-          aloita
+          List
         </Link>
-        <Link className="NavBarItem" to="/practice">
-          treenaa
+        <Link className="NavBarItem" to="/">
+          about
         </Link>
-        <Link className="NavBarItem" to="/practiceSelection">
-          treenaa-uusi
-        </Link>
-        <Link className="NavBarItem" to="/login">
-          {user ? 'kirjaudu ulos' : 'kirjaudu sisään'}
-        </Link>
-        {user ? (
-          <Link className="NavBarItem" to="/userView">
-            {user?.username}
-          </Link>
-        ) : (
-          <Link className="NavBarItem" to="/register">
-            luo tili
-          </Link>
-        )}
       </div>
       <div
         className="logoContainer"

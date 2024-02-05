@@ -271,22 +271,22 @@
   }
 }
 
-/* unvisited link */
+/* unvisited link 
 a:link {
   color: rgb(40, 40, 40);
 }
 
-/* visited link */
+/* visited link 
 a:visited {
   color: rgb(40, 40, 40);
 }
 
-/* mouse over link */
+/* mouse over link 
 a:hover {
   color: var(--accent-color);
 }
 
-/* selected link */
+/* selected link 
 a:active {
   color: rgb(40, 40, 40);
-}
+} */

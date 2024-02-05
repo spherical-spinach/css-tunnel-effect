@@ -1,5 +1,5 @@
 .NavBar {
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   justify-content: center;
   position: -webkit-sticky;
   position: sticky;
@@ -22,13 +22,14 @@
 .NavBarItemsContainer {
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: end;
   text-transform: uppercase;
+  padding-right: 3rem;
 }
 
 .NavBarItem {
   padding: 1rem;
-  color: rgb(0, 0, 0);
+  color: var(--secondary-color);
   text-decoration-line: none;
 }
 
