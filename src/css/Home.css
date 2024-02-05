@@ -7,8 +7,7 @@
 }
 
 .homeContainer {
-  background-color: #f9f9f9;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-bottom: 50px;
   margin-left: 35%;
   margin-right: 35%;
@@ -107,6 +106,7 @@
   text-align: center;
   padding-bottom: 5%;
   font-size: 250%;
+  color: var(--secondary-color);
 }
 
 .courses {

@@ -22,7 +22,7 @@
 .NavBarItemsContainer {
   display: flex;
   flex: 1;
-  justify-content: end;
+  justify-content: flex-end;
   text-transform: uppercase;
   padding-right: 3rem;
 }
