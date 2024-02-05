@@ -4,7 +4,7 @@ import Hamburger from 'hamburger-react'
 import { selectUser } from '../../../reducers/userReducer'
 
 import '../../../css/NavBar.css'
-import logo from '../../../images/pattern_icon_red.png'
+import logo from '../../../images/brain-click-icon.png'
 
 const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
