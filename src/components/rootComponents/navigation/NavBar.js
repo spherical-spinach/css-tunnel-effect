@@ -4,7 +4,7 @@ import Hamburger from 'hamburger-react'
 import { selectUser } from '../../../reducers/userReducer'
 
 import '../../../css/NavBar.css'
-import logo from '../../../images/pkt-logo.png'
+import logo from '../../../images/pattern_icon_red.png'
 
 const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
@@ -13,6 +13,7 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   return (
     <div className="NavBar">
       <div
+        aria-label="Menu icon"
         className="HamburgerMenu"
         onClick={drawerToggleClickHandler}
         onKeyPress={drawerToggleClickHandler}

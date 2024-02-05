@@ -1,5 +1,20 @@
+/*color palette https://colorhunt.co/palette/0306373c0753720455910a67*/
+
+:root {
+  --background-dark: #1c1c1e;
+  --background-darker: #151517;
+  --secondary-color: #ffffff;
+  --container-grey: #242426;
+  --container-light-grey: #525252;
+  --accent-color: #de3a3c;
+}
+
 body {
-  background-image: url('../images/background-image7.jpg');
+  background-image: linear-gradient(
+    to bottom right,
+    var(--background-dark),
+    var(--background-darker)
+  );
 }
 
 html {
@@ -7,12 +22,6 @@ html {
 }
 
 .appContainer {
-  --main-color: #e7e7e7;
-  --secondary-color: rgb(128, 128, 100);
-  --contrast-color: #ffffff;
-  --accent-color: rgb(219, 214, 205);
-  --error-color: rgb(255, 132, 132);
-  --success-color: rgb(113, 255, 113);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,7 +30,7 @@ html {
 
 .footer {
   text-align: center;
-  background-color: #e7e7e7;
+  background-color: var(--accent-color);
   padding: 4rem;
   margin-top: 4rem;
   width: 100%;

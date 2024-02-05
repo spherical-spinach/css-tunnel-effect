@@ -142,7 +142,7 @@
 }
 
 .startButton {
-  background-color: #1d1c40;
+  background-color: var(--accent-color);
   border-radius: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -283,7 +283,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: rgb(47, 158, 118);
+  color: var(--accent-color);
 }
 
 /* selected link */
