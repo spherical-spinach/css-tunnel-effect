@@ -29,7 +29,7 @@ html {
   background-image: linear-gradient(
     to bottom,
     var(--background-darker),
-    var(--accent-color)
+    var(--container-light-grey)
   );
   padding: 6rem 4rem 2rem 4rem;
   margin-top: 4rem;

@@ -5,8 +5,12 @@ import '../../css/HomeNew.css'
 const Home = () => (
   <div className="homeViewContainer">
     <div className="homeContainer">
-      <h2 className="header">List of dark patterns</h2>
-      <Link to="/">Trick wording</Link>{' '}
+      <h2 className="header">List of Dark Patterns</h2>
+      <div className="horizontalLine" />
+      <div className="homeListItem">
+        <div className="arrowRight" />
+        <Link to="/">Trick wording</Link>{' '}
+      </div>
     </div>
   </div>
 )

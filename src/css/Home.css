@@ -271,22 +271,45 @@
   }
 }
 
-/* unvisited link 
-a:link {
-  color: rgb(40, 40, 40);
+/* unvisited link */
+a {
+  color: var(--secondary-color);
 }
 
 /* visited link 
 a:visited {
-  color: rgb(40, 40, 40);
-}
+  color: var(--container-light-grey);
+} */
 
-/* mouse over link 
+/* mouse over link */
 a:hover {
   color: var(--accent-color);
 }
 
-/* selected link 
+/* selected link */
 a:active {
-  color: rgb(40, 40, 40);
-} */
+  filter: brightness(80%);
+}
+
+.horizontalLine {
+  height: 0.3rem;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 2rem;
+  background-color: var(--container-light-grey);
+}
+
+.homeListItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.homeListItem > .arrowRight {
+  margin-right: 1rem;
+}
+
+.homeListItem > a {
+  font-size: larger;
+}
