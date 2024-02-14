@@ -1,6 +1,6 @@
 const Footer = () => (
   <div className="footer">
-    <i>paasykoetreenit.fi</i>
+    <i>github.com/iemeli/dark-patterns-demo</i>
   </div>
 )
 

@@ -10,11 +10,7 @@
 }
 
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--background-dark),
-    var(--background-darker)
-  );
+  background-color: var(--background-darker);
 }
 
 html {
@@ -30,14 +26,18 @@ html {
 
 .footer {
   text-align: center;
-  background-color: var(--accent-color);
-  padding: 4rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--background-darker),
+    var(--accent-color)
+  );
+  padding: 6rem 4rem 2rem 4rem;
   margin-top: 4rem;
   width: 100%;
 }
 
 .footer > i {
-  color: #1d1c40;
+  color: var(--background-dark);
 }
 
 .contentContainer {
