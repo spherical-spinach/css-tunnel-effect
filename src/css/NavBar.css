@@ -12,7 +12,7 @@
 }
 
 .HamburgerMenu {
-  color: var(--background-darker);
+  color: var(--secondary-color);
   position: absolute;
   padding: 2%;
   top: 0px;
