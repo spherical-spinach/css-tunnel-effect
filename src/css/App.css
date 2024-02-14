@@ -29,7 +29,7 @@ html {
   background-image: linear-gradient(
     to bottom,
     var(--background-darker),
-    var(--container-light-grey)
+    var(--container-grey)
   );
   padding: 6rem 4rem 2rem 4rem;
   margin-top: 4rem;
@@ -37,7 +37,7 @@ html {
 }
 
 .footer > i {
-  color: var(--background-dark);
+  color: var(--accent-color);
 }
 
 .contentContainer {
