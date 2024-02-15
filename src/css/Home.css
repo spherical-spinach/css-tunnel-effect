@@ -1,198 +1,6 @@
-.homeViewContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 5%;
-}
-
-.homeContainer {
-  border-radius: 10px;
-  margin-bottom: 50px;
-  margin-left: 35%;
-  margin-right: 35%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  /* width: 90%; */
-  /* padding-bottom: 50px; */
-  padding: 2rem 0.5rem 2rem 0.5rem;
-}
-
-.homeContainer > * {
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
-}
-
-.coursesContainer {
-  background-color: #f9f9f9;
-  border-radius: 20px;
-  margin-bottom: 80px;
-  /* margin-left: 35%;
-  margin-right: 35%; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 19%;
-  padding: 2rem 2rem 2rem 2rem;
-}
-
-.logoImage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 20%;
-  height: 20%;
-  /* border: 3px solid rgb(68, 15, 15); */
-}
-
-.mainText {
-  font-family: 'Poppins', Times, serif;
-  font-size: 120%;
-  text-align: center;
-  color: rgb(40, 40, 40);
-  font-weight: 350;
-  align-items: center;
-  font-weight: 400;
-}
-
-.infoText {
-  font-family: 'Poppins', Times, serif;
-  font-size: 120%;
-  font-style: italic;
-  text-align: center;
-  color: #444447;
-  font-weight: 100;
-  align-items: center;
-  font-weight: 400;
-  margin-top: 10%;
-}
-
-.highlightedText {
-  font-family: 'Poppins', Times, serif;
-  font-size: 140%;
-  text-align: center;
-  margin: 0em 0em 0em 0em;
-  color: rgb(40, 40, 40);
-  font-weight: 350;
-  align-items: center;
-  margin-bottom: 10%;
-  font-weight: 500;
-  margin-top: 3%;
-}
-
-.linkedText {
-  font-family: 'Poppins', Times, serif;
-  font-size: 140%;
-  text-align: center;
-  margin: 0em 0em 0em 0em;
-  color: rgb(40, 40, 40);
-  font-weight: 350;
-  align-items: center;
-  /* margin-bottom: 10px; */
-  font-weight: 500;
-  margin-top: 50px;
-}
-
-.header {
-  font-family: 'Courier New', Courier, monospace;
-  padding: 1rem;
-  text-align: center;
-  padding-bottom: 5%;
-  font-size: 250%;
-  color: var(--secondary-color);
-}
-
-.courses {
-  font-family: 'Courier New', Courier, monospace;
-  padding: 1rem;
-  text-align: center;
-  padding-bottom: 35px;
-  color: #f9f9f9;
-}
-
-.formHeader > h2 {
-  color: rgb(4, 4, 4);
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.courseHeader {
-  font-family: 'Courxier new', Times, serif;
-  font-size: xx-large;
-  font-weight: 300;
-  align-items: center;
-}
-
-.subHeader {
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-}
-
-.subHeader > a {
-  text-decoration: none;
-  color: rgb(54, 54, 54);
-  font-family: 'Poppins', Times, serif;
-}
-
-.startButton {
-  background-color: var(--accent-color);
-  border-radius: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.startButtonText {
-  color: #f9f9f9;
-  font-family: 'Poppins', Times, serif;
-  padding: 0.5rem;
-  font-size: x-large;
-  letter-spacing: 3.5px;
-}
-.courseButton {
-  background-color: #282762;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  width: 80%;
-}
-
-.courseButtonText {
-  color: #f9f9f9;
-  font-family: 'Poppins', Times, serif;
-  padding: 1rem 1rem 1rem 10%;
-  font-size: large;
-  letter-spacing: 3.5px;
-  text-transform: capitalize;
-}
-
-.bottomText {
-  padding-top: 3rem;
-  text-align: center;
-  font-family: 'Poppins', Times, serif;
-}
-
-.bottomText > a {
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-family: 'Poppins', Times, serif;
-}
-
 /* Small mobile devices */
 @media only screen and (max-width: 310px) and (min-width: 0px) {
-  .startButton:hover {
-    opacity: 0.8;
-  }
-  .courseButton:hover {
-    opacity: 0.8;
-  }
-  .homeContainer {
+  .home-container {
     margin-left: 5%;
     margin-right: 5%;
     width: 98%;
@@ -217,58 +25,23 @@
 
 /* Mobile devices */
 @media only screen and (max-width: 768px) and (min-width: 311px) {
-  .startButton:hover {
-    opacity: 0.8;
-  }
-  .courseButton:hover {
-    opacity: 0.8;
-  }
-  .homeContainer {
+  .home-container {
     margin-left: 0%;
     margin-right: 0%;
     width: 90%;
-  }
-  /* .boxContainer {
-    margin-left: 15%;
-    margin-right: 15%;
-  } */
-  .infoText {
-    font-size: 112%;
-  }
-  .highlightedText {
-    font-size: 135%;
-  }
-  .mainText {
-    font-size: 110%;
   }
 }
 
 /* Tablet devices */
 @media only screen and (max-width: 1280px) and (min-width: 769px) {
-  .startButton:hover {
-    opacity: 0.8;
-  }
-  .courseButton:hover {
-    opacity: 0.8;
-  }
   .homeContainer {
     margin-left: 25%;
     margin-right: 25%;
   }
-  /* .boxContainer {
-    margin-left: 30%;
-    margin-right: 30%;
-  } */
 }
 
 /* Non-mobile devices */
 @media only screen and (min-width: 1281px) {
-  .startButton:hover {
-    opacity: 0.8;
-  }
-  .courseButton:hover {
-    opacity: 0.8;
-  }
 }
 
 /* unvisited link */
@@ -291,7 +64,7 @@ a:active {
   filter: brightness(80%);
 }
 
-.horizontalLine {
+.horizontal-line {
   height: 0.3rem;
   width: 100%;
   padding: 0;
@@ -299,17 +72,26 @@ a:active {
   background-color: var(--container-light-grey);
 }
 
-.homeListItem {
+.home-list-item {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
 
-.homeListItem > .arrowRight {
+.home-list-item > .arrow-right {
   margin-right: 1rem;
 }
 
-.homeListItem > a {
+.home-list-item > a {
   font-size: larger;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+
+  border-left: 20px solid var(--accent-color);
 }

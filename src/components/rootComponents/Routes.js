@@ -1,30 +1,15 @@
 import { Route, Routes as RouterRoutes } from 'react-router-dom'
 
-import Home from './Home'
-import Login from '../login/Login'
-import Practice from '../practice/Practice'
-import RegisterUser from '../register/RegisterUser'
-import Practice2 from '../practice/Practice2'
-import UserView from '../login/UserView'
+import List from './List'
+import TrickWordingMain from '../trickWording/TrickWordingMain'
 import Notification from '../general/Notification'
-import AddQuestions from '../createCourse/AddQuestions'
-import PracticeSelectionContainer from '../practice/PracticeSelectionContainer'
 
 const Routes = () => (
-  <div className="contentContainer">
+  <div className="routes-container">
     <Notification />
     <RouterRoutes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/practice" element={<Practice />} />
-      <Route path="/practice2" element={<Practice2 />} />
-      <Route path="/register" element={<RegisterUser />} />
-      <Route path="/userView" element={<UserView />} />
-      <Route path="/addQuestions" element={<AddQuestions />} />
-      <Route
-        path="/practiceSelection"
-        element={<PracticeSelectionContainer />}
-      />
+      <Route path="/" element={<List />} />
+      <Route path="/trickWording" element={<TrickWordingMain />} />
     </RouterRoutes>
   </div>
 )
