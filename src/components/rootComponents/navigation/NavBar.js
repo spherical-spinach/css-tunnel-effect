@@ -1,24 +1,18 @@
 import { Link, useNavigate } from 'react-router-dom'
-import Hamburger from 'hamburger-react'
 
 import '../../../css/NavBar.css'
 import logo from '../../../images/brain-click-icon.png'
+import Hamburger from './Hamburger'
 
 const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
   const navigate = useNavigate()
 
   return (
     <div className="NavBar">
-      <div
-        aria-label="Menu icon"
-        className="HamburgerMenu"
-        onClick={drawerToggleClickHandler}
-        onKeyPress={drawerToggleClickHandler}
-        role="button"
-        tabIndex={0}
-      >
-        <Hamburger toggled={hamburgerIsOpen} />
-      </div>
+      <Hamburger
+        toggled={hamburgerIsOpen}
+        handleClick={drawerToggleClickHandler}
+      />
       <div className="NavBarItemsContainer">
         <Link className="NavBarItem" to="/">
           List
