@@ -1,0 +1,25 @@
+.container {
+  position: abso;
+  width: 100vw;
+  height: 100vh;
+}
+
+.circle,
+.big-circle,
+.small-circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid red;
+}
+
+.big-circle {
+  width: 400px;
+  height: 400px;
+}
+
+.small-circle {
+  width: 100px;
+  height: 100px;
+}

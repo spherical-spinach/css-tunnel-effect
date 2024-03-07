@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../../css/Home.css'
+import Tunnel from './Tunnel'
 
 const List = () => (
   <div className="content-container">
@@ -9,6 +10,7 @@ const List = () => (
       <div className="arrow-right" />
       <Link to="/trickWording">Trick wording</Link>{' '}
     </div>
+    <Tunnel />
   </div>
 )
 
