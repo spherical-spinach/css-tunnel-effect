@@ -34,7 +34,7 @@ const Tunnel = () => {
   return (
     <>
       <div
-        className="circle"
+        className="circle circle--rotation"
         style={{
           left:
             documentCenter.x - circleSize / 2 + distanceX / (circleSize / 20),
@@ -42,10 +42,11 @@ const Tunnel = () => {
             documentCenter.y - circleSize / 2 + distanceY / (circleSize / 20),
           width: circleSize,
           height: circleSize,
+          borderStyle: 'solid hidden solid hidden',
         }}
       />
       <div
-        className="circle"
+        className="circle circle--rotation"
         style={{
           left:
             documentCenter.x -
@@ -57,10 +58,11 @@ const Tunnel = () => {
             distanceY / (circleSize / 1.2 / 20),
           width: circleSize / 1.2,
           height: circleSize / 1.2,
+          borderStyle: 'hidden solid hidden solid',
         }}
       />
       <div
-        className="circle"
+        className="circle circle--rotation"
         style={{
           left:
             documentCenter.x -
@@ -72,10 +74,11 @@ const Tunnel = () => {
             distanceY / (circleSize / 1.4 / 20),
           width: circleSize / 1.4,
           height: circleSize / 1.4,
+          borderStyle: 'solid hidden solid hidden',
         }}
       />
       <div
-        className="circle"
+        className="circle circle--rotation"
         style={{
           left:
             documentCenter.x -
@@ -87,10 +90,11 @@ const Tunnel = () => {
             distanceY / (circleSize / 1.6 / 20),
           width: circleSize / 1.6,
           height: circleSize / 1.6,
+          borderStyle: 'hidden solid hidden solid',
         }}
       />
       <div
-        className="circle"
+        className="circle circle--rotation"
         style={{
           left:
             documentCenter.x -
@@ -102,10 +106,11 @@ const Tunnel = () => {
             distanceY / (circleSize / 1.8 / 20),
           width: circleSize / 1.8,
           height: circleSize / 1.8,
+          borderStyle: 'solid hidden solid hidden',
         }}
       />
       <div
-        className="circle"
+        className="circle circle--rotation"
         style={{
           left:
             documentCenter.x -
@@ -117,10 +122,11 @@ const Tunnel = () => {
             distanceY / (circleSize / 2 / 20),
           width: circleSize / 2,
           height: circleSize / 2,
+          borderStyle: 'hidden solid hidden solid',
         }}
       />
       <div
-        className="circle"
+        className="circle circle--rotation"
         style={{
           left:
             documentCenter.x -
@@ -132,8 +138,22 @@ const Tunnel = () => {
             distanceY / (circleSize / 2.2 / 20),
           width: circleSize / 2.2,
           height: circleSize / 2.2,
+          borderStyle: 'solid hidden solid hidden',
         }}
       />
+      <div
+        className="circle circle--small"
+        style={{
+          left:
+            documentCenter.x - circleSize / 2.5 + distanceX / (circleSize / 20),
+          top:
+            documentCenter.y - circleSize / 2.5 + distanceY / (circleSize / 20),
+          width: 40,
+          height: 40,
+        }}
+      >
+        <div className="circle circle--expanding" />
+      </div>
     </>
   )
 }

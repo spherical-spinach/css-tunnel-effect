@@ -1,7 +1,56 @@
-.circle,
-.big-circle,
-.small-circle {
+.circle {
   position: absolute;
   border-radius: 50%;
-  border: 2px solid red;
+  border: 3px solid var(--secondary-color);
+}
+
+.circle--rotation {
+  animation: rotation 20s linear infinite;
+}
+
+.circle--small {
+  background-color: var(--accent-color);
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 20px 20px rgba(222, 58, 60, 0.5);
+}
+
+.circle--expanding {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--accent-color);
+  animation: expand-animation 1.5s ease-in-out infinite;
+  transform-origin: center; /* Set transform origin to center */
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.expand-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: blue; /* Adjust color */
+  animation: expand-animation 1.5s ease-in-out infinite;
+}
+
+@keyframes expand-animation {
+  0% {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+  }
+  100% {
+    width: 80px; /* Adjust expansion radius */
+    height: 80px; /* Adjust expansion radius */
+    opacity: 0;
+  }
 }
