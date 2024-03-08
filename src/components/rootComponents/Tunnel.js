@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../../css/Tunnel.scss'
+import '../../css/Tunnel.css'
 
 const Tunnel = () => {
   const [documentCenter, setDocumentCenter] = useState({ x: 0, y: 0 })
@@ -29,27 +29,109 @@ const Tunnel = () => {
   const distanceX = cursorPosition.x - documentCenter.x
   const distanceY = cursorPosition.y - documentCenter.y
 
+  const circleSize = 400
+
   return (
     <>
       <div
         className="circle"
         style={{
-          left: documentCenter.x - 100 + distanceX / 20,
-          top: documentCenter.y - 100 + distanceY / 20,
+          left:
+            documentCenter.x - circleSize / 2 + distanceX / (circleSize / 20),
+          top:
+            documentCenter.y - circleSize / 2 + distanceY / (circleSize / 20),
+          width: circleSize,
+          height: circleSize,
         }}
       />
       <div
-        className="big-circle"
+        className="circle"
         style={{
-          left: documentCenter.x - 200 + distanceX / 10,
-          top: documentCenter.y - 200 + distanceY / 10,
+          left:
+            documentCenter.x -
+            circleSize / 1.2 / 2 +
+            distanceX / (circleSize / 1.2 / 20),
+          top:
+            documentCenter.y -
+            circleSize / 1.2 / 2 +
+            distanceY / (circleSize / 1.2 / 20),
+          width: circleSize / 1.2,
+          height: circleSize / 1.2,
         }}
       />
       <div
-        className="small-circle"
+        className="circle"
         style={{
-          left: documentCenter.x - 50 + distanceX / 30,
-          top: documentCenter.y - 50 + distanceY / 30,
+          left:
+            documentCenter.x -
+            circleSize / 1.4 / 2 +
+            distanceX / (circleSize / 1.4 / 20),
+          top:
+            documentCenter.y -
+            circleSize / 1.4 / 2 +
+            distanceY / (circleSize / 1.4 / 20),
+          width: circleSize / 1.4,
+          height: circleSize / 1.4,
+        }}
+      />
+      <div
+        className="circle"
+        style={{
+          left:
+            documentCenter.x -
+            circleSize / 1.6 / 2 +
+            distanceX / (circleSize / 1.6 / 20),
+          top:
+            documentCenter.y -
+            circleSize / 1.6 / 2 +
+            distanceY / (circleSize / 1.6 / 20),
+          width: circleSize / 1.6,
+          height: circleSize / 1.6,
+        }}
+      />
+      <div
+        className="circle"
+        style={{
+          left:
+            documentCenter.x -
+            circleSize / 1.8 / 2 +
+            distanceX / (circleSize / 1.8 / 20),
+          top:
+            documentCenter.y -
+            circleSize / 1.8 / 2 +
+            distanceY / (circleSize / 1.8 / 20),
+          width: circleSize / 1.8,
+          height: circleSize / 1.8,
+        }}
+      />
+      <div
+        className="circle"
+        style={{
+          left:
+            documentCenter.x -
+            circleSize / 2 / 2 +
+            distanceX / (circleSize / 2 / 20),
+          top:
+            documentCenter.y -
+            circleSize / 2 / 2 +
+            distanceY / (circleSize / 2 / 20),
+          width: circleSize / 2,
+          height: circleSize / 2,
+        }}
+      />
+      <div
+        className="circle"
+        style={{
+          left:
+            documentCenter.x -
+            circleSize / 2.2 / 2 +
+            distanceX / (circleSize / 2.2 / 20),
+          top:
+            documentCenter.y -
+            circleSize / 2.2 / 2 +
+            distanceY / (circleSize / 2.2 / 20),
+          width: circleSize / 2.2,
+          height: circleSize / 2.2,
         }}
       />
     </>

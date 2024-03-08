@@ -1,0 +1,7 @@
+.circle,
+.big-circle,
+.small-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid red;
+}
