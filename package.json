@@ -63,6 +63,5 @@
     "gh-pages": "^6.1.1",
     "json-server": "^0.17.0"
   },
-  "proxy": "http://localhost:3001",
-  "homepage": "http://iemeli.github.io/dark-patterns-demo"
+  "proxy": "http://localhost:3001"
 }
