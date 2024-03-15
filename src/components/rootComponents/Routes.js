@@ -9,6 +9,7 @@ const Routes = () => (
     <Notification />
     <RouterRoutes>
       <Route path="/" element={<List />} />
+      <Route path="/dark-patterns-demo" element={<List />} />
       <Route path="/trickWording" element={<TrickWordingMain />} />
     </RouterRoutes>
   </div>
