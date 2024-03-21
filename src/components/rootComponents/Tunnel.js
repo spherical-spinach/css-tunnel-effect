@@ -29,50 +29,74 @@ const Tunnel = () => {
   const distanceX = cursorPosition.x - documentCenter.x
   const distanceY = cursorPosition.y - documentCenter.y
 
-  const circleSize = 400
+  const circleSize = 180
+
+  const calculateCircleMovement = scalingUpBy => {
+    const movementScalingFactor = scalingUpBy / 5
+    const scaledDistanceX = distanceX * movementScalingFactor
+    const scaledDistanceY = distanceY * movementScalingFactor
+
+    return {
+      left:
+        documentCenter.x -
+        (circleSize * scalingUpBy) / 2 +
+        scaledDistanceX / (circleSize / scalingUpBy / 20),
+      top:
+        documentCenter.y -
+        (circleSize * scalingUpBy) / 2 +
+        scaledDistanceY / (circleSize / scalingUpBy / 20),
+    }
+  }
 
   const circles = [
     {
       id: 1,
-      size: 1,
+      scalingUpBy: 1,
       borderStyle: 'solid hidden solid hidden',
       className: 'circle--rotation',
+      opacity: 0.4,
     },
     {
       id: 2,
-      size: 1.2,
+      scalingUpBy: 1.2,
       borderStyle: 'hidden solid hidden solid',
       className: 'circle--rotation',
+      opacity: 0.5,
     },
     {
       id: 3,
-      size: 1.4,
+      scalingUpBy: 1.4,
       borderStyle: 'solid hidden solid hidden',
       className: 'circle--rotation',
+      opacity: 0.6,
     },
     {
       id: 4,
-      size: 1.6,
+      scalingUpBy: 1.6,
       borderStyle: 'hidden solid hidden solid',
       className: 'circle--rotation',
+      opacity: 0.7,
     },
     {
       id: 5,
-      size: 1.8,
+      scalingUpBy: 1.8,
       borderStyle: 'solid hidden solid hidden',
       className: 'circle--rotation',
+      opacity: 0.8,
     },
     {
       id: 6,
-      size: 2,
+      scalingUpBy: 2,
       borderStyle: 'hidden solid hidden solid',
       className: 'circle--rotation',
+      opacity: 0.9,
     },
     {
       id: 7,
-      size: 2.2,
+      scalingUpBy: 2.2,
       borderStyle: 'solid hidden solid hidden',
       className: 'circle--rotation',
+      opacity: 1,
     },
   ]
 
@@ -83,27 +107,19 @@ const Tunnel = () => {
           key={circle.id}
           className={`circle ${circle.className}`}
           style={{
-            left:
-              documentCenter.x -
-              circleSize / circle.size / 2 +
-              distanceX / (circleSize / circle.size / 20),
-            top:
-              documentCenter.y -
-              circleSize / circle.size / 2 +
-              distanceY / (circleSize / circle.size / 20),
-            width: circleSize / circle.size,
-            height: circleSize / circle.size,
+            ...calculateCircleMovement(circle.scalingUpBy),
+            width: circleSize * circle.scalingUpBy,
+            height: circleSize * circle.scalingUpBy,
             borderStyle: circle.borderStyle,
+            opacity: circle.opacity,
           }}
         />
       ))}
       <div
         className="circle circle--small"
         style={{
-          left:
-            documentCenter.x - circleSize / 2.5 + distanceX / (circleSize / 20),
-          top:
-            documentCenter.y - circleSize / 2.5 + distanceY / (circleSize / 20),
+          ...calculateCircleMovement(2.2),
+          transform: 'translate(35px,35px)',
           width: 40,
           height: 40,
         }}
@@ -116,16 +132,8 @@ const Tunnel = () => {
       <div
         className="circle circle--small"
         style={{
-          left:
-            320 +
-            documentCenter.x -
-            circleSize / 1.6 +
-            distanceX / (circleSize / 1.6 / 20),
-          top:
-            320 +
-            +documentCenter.y -
-            circleSize / 1.6 +
-            distanceY / (circleSize / 1.6 / 20),
+          ...calculateCircleMovement(1.6),
+          transform: 'translate(270px,100px)',
           width: 30,
           height: 30,
         }}
