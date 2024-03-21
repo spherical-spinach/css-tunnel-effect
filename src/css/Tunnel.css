@@ -16,10 +16,6 @@
 
 .circle--expanding {
   position: absolute;
-  top: 17px;
-  left: 17px;
-  width: 40px;
-  height: 40px;
   border: 1px solid var(--accent-color);
   animation: expand-animation 1.5s ease-in-out infinite;
   transform-origin: center; /* Set transform origin to center */
@@ -44,8 +40,6 @@
 
 @keyframes expand-animation {
   0% {
-    width: 40px;
-    height: 40px;
     opacity: 1;
   }
   100% {
