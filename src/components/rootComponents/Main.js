@@ -1,4 +1,4 @@
-import '../../css/Home.css'
+import '../../css/Main.css'
 import Tunnel from './Tunnel'
 
 const Main = () => (
