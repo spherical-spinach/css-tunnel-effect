@@ -116,7 +116,7 @@ const Tunnel = () => {
         />
       ))}
       <div
-        className="circle circle--small"
+        className="circle circle--small circle--clickable"
         style={{
           ...calculateCircleMovement(2.2),
           transform: 'translate(35px,35px)',
@@ -125,10 +125,20 @@ const Tunnel = () => {
         }}
       >
         <div
+          className="infobox"
+          style={{
+            ...calculateCircleMovement(2.2),
+            transform: 'translate(-100px,-100px)',
+          }}
+        >
+          Trick wording
+        </div>
+        <div
           className="circle circle--expanding"
           style={{ width: '40px', height: '40px', top: '17px', left: '17px' }}
         />
       </div>
+
       <div
         className="circle circle--small"
         style={{

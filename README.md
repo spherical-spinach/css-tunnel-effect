@@ -9,3 +9,5 @@ No dark patterns have been added yet. Focus has been on CSS styling.
 The Github page can be found here:
 
 https://iemeli.github.io/dark-patterns-demo/
+
+More about dark patterns on: https://www.deceptive.design/

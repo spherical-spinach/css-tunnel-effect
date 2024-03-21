@@ -48,3 +48,28 @@
     opacity: 0;
   }
 }
+
+.infobox {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.circle--clickable:hover .infobox {
+  opacity: 1;
+}
+
+.infobox::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 23px); /* Adjust as needed */
+  left: calc(50% + 40px);
+  width: 4px; /* Line width */
+  height: 70px; /* Line length */
+  background-color: var(--accent-color); /* Line color */
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
