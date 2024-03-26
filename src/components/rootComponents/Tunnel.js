@@ -128,11 +128,17 @@ const Tunnel = () => {
           className="infobox"
           style={{
             ...calculateCircleMovement(2.2),
-            transform: 'translate(-100px,-100px)',
+            transform: 'translate(-200px,-100px)',
           }}
         >
-          Trick wording
+          <p>TRICK WORDING</p>
         </div>
+        <div
+          className="connecting-line"
+          style={{
+            transform: 'translate(-20px,-114px) rotate(-45deg)',
+          }}
+        />
         <div
           className="circle circle--expanding"
           style={{ width: '40px', height: '40px', top: '17px', left: '17px' }}
@@ -140,7 +146,7 @@ const Tunnel = () => {
       </div>
 
       <div
-        className="circle circle--small"
+        className="circle circle--small circle--clickable"
         style={{
           ...calculateCircleMovement(1.6),
           transform: 'translate(270px,100px)',
@@ -148,6 +154,21 @@ const Tunnel = () => {
           height: 30,
         }}
       >
+        <div
+          className="infobox"
+          style={{
+            ...calculateCircleMovement(2.2),
+            transform: 'translate(80px,-100px)',
+          }}
+        >
+          <p>CONFIRMSHAMING</p>
+        </div>
+        <div
+          className="connecting-line"
+          style={{
+            transform: 'translate(48px,-115px) rotate(45deg)',
+          }}
+        />
         <div
           className="circle circle--expanding"
           style={{ width: '30px', height: '30px', top: '12px', left: '12px' }}

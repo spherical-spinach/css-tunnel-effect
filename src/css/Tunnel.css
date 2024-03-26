@@ -50,26 +50,36 @@
 }
 
 .infobox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
   background-color: var(--accent-color);
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
-  width: 100px;
   opacity: 0;
   transition: all 0.3s ease;
+}
+
+.infobox > p {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .circle--clickable:hover .infobox {
   opacity: 1;
 }
 
-.infobox::after {
-  content: '';
+.circle--clickable:hover .connecting-line {
+  opacity: 1;
+}
+
+.connecting-line {
   position: absolute;
-  top: calc(100% + 23px); /* Adjust as needed */
-  left: calc(50% + 40px);
   width: 4px; /* Line width */
-  height: 70px; /* Line length */
+  height: 90px; /* Line length */
   background-color: var(--accent-color); /* Line color */
-  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
