@@ -1,13 +1,3 @@
-# Dark patterns demo
+# CSS tunnel effect
 
-The idea of this repo is to demonstrate the use of dark, or deceptive patterns in web design.
-
-The stack consists only of React front with some CSS to enable easy production environment on Github pages.
-
-No dark patterns have been added yet. Focus has been on CSS styling.
-
-The Github page can be found here:
-
-https://iemeli.github.io/dark-patterns-demo/
-
-More about dark patterns on: https://www.deceptive.design/
+The original idea was to create an app that demonstrates the usage of dark patterns in UI. I wanted to create a fancy tunnel effect menu where you could click the glowing balls to get to dark pattern views. I ended up just focusing on CSS animation.
