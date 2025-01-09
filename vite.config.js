@@ -5,7 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist/static',
-    base: '/static/',
+    base: 'https://spherical-spinach.github.io/css-tunnel-effect/',
   },
 })
