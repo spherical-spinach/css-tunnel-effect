@@ -7,7 +7,7 @@ const Routes = () => (
   <div className="routes-container">
     <RouterRoutes>
       <Route path="/" element={<Home />} />
-      <Route path="/dark-patterns-demo" element={<Home />} />
+      <Route path="/css-tunnel-effect" element={<Home />} />
       <Route path="/trickWording" element={<TrickWordingMain />} />
     </RouterRoutes>
   </div>
