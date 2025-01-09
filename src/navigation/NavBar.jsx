@@ -14,10 +14,10 @@ const NavBar = ({ hamburgerIsOpen, drawerToggleClickHandler }) => {
         handleClick={drawerToggleClickHandler}
       />
       <div className="NavBarItemsContainer">
-        <Link className="NavBarItem" to="/">
+        <Link className="NavBarItem" to="/css-tunnel-effect/">
           List
         </Link>
-        <Link className="NavBarItem" to="/">
+        <Link className="NavBarItem" to="/css-tunnel-effect/">
           about
         </Link>
       </div>
